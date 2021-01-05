@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>epoll(7) - Linux manual page</title>
+    <link rel="stylesheet" type="text/css" href="epoll(7)%20-%20Linux%20manual%20page_files/style_002.css" title="style">
+    <link rel="stylesheet" type="text/css" href="epoll(7)%20-%20Linux%20manual%20page_files/style.css" title="style">
+</head>
+
+<body>
+
+<div class="page-top"><a id="top_of_page"></a></div>
+<!--%%%TOP_BAR%%%-->
+    <div class="nav-bar">
+        <table class="nav-table">
+            <tbody><tr>
+                <td class="nav-cell">
+                    <p class="nav-text">
+                        <a href="https://man7.org/index.html">man7.org</a> &gt; Linux &gt; <a href="https://man7.org/linux/man-pages/index.html">man-pages</a>
+                    </p>
+                </td>
+                <td class="training-cell">
+                    <p class="training-text"><a class="training-link" href="http://man7.org/training/">Linux/UNIX system programming training</a></p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+<hr class="nav-end">
+
+<!--%%%PAGE_START%%%-->
+<h1>epoll(7) — Linux manual page</h1>
+
+
+<table class="sec-table">
+<tbody><tr>
+    <td>
+        <p class="section-dir">
+<a href="#NAME">NAME</a> | <a href="#概要">SYNOPSIS</a> | <a href="#DESCRIPTION">DESCRIPTION</a> | <a href="#VERSIONS">VERSIONS</a> | <a href="#CONFORMING_TO">CONFORMING&nbsp;TO</a> | <a href="#NOTES">NOTES</a> | <a href="#SEE_ALSO">SEE&nbsp;ALSO</a> | <a href="#COLOPHON">COLOPHON</a>
+        </p>
+    </td>
+</tr>
+<tr>
+    <td class="search-box">
+        <div class="man-search-box">
+
+            <form method="get" action="https://www.google.com/search">
+                <fieldset class="man-search">
+                    <input type="text" name="q" size="10" maxlength="255">
+                    <input type="hidden" name="sitesearch" value="man7.org/linux/man-pages">
+                    <input type="submit" name="sa" value="Search online pages">
+                </fieldset>
+            </form>
+
+        </div>
+    </td>
+    <td> </td>
+</tr>
+</tbody></table>
+
+<pre><span class="headline">EPOLL(7)                Linux Programmer's Manual               EPOLL(7)</span>
+</pre>
+<h2><a id="NAME" href="#NAME"></a>名称 &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       epoll - I/O 事件通知机制
+</pre>
+<h2><a id="SYNOPSIS" href="#概要"></a>概要 &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       <b>#include &lt;sys/epoll.h&gt;</b>
+</pre>
+<h2><a id="DESCRIPTION" href="#DESCRIPTION"></a>描述 &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>        <b>epoll </b>API 执行类似于 <a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>的任务: 监听
+       监视多个文件描述符来检查它们当中哪些 I/O 是可用的。
+        <b>epoll </b>API 可以选择边缘触发(ET - edge-triggered) 或
+       水平触发(LT - level-triggered) 接口 并且在监听大量文件描述符的情况下也能正常工作。
+       
+
+       <b>epoll </b>API 的核心概念是<b>epoll </b><i>实例</i>， 一个在内核的数据结构，
+       从用户空间的角度看，可以认为是一个有两个列表的容器:
+       
+
+       •  <i>interest</i> list (有时也叫 <b>epoll </b>set): 进程注册监听的文件描述符集合。
+         
+         
+
+       •  <i>ready</i> list: I/O “就绪”的文件描述符集合。
+         ready list 是 interest list 中文件描述符的子集(或准确一点说，是 interest list 中文件描述符引用的集合。
+         
+         根据这些文件描述符 I/O 活动的结果，内核将自动填充 ready list。
+         
+
+       下面的系统调用用于创建和管理一个<b>epoll</b>实例：
+       
+
+       • <a href="https://man7.org/linux/man-pages/man2/epoll_create.2.html">epoll_create(2)</a> 创建一个新的 <b>epoll </b>实例并返回一个文件描述符指向这个实例。
+         
+         (类似的<a href="https://man7.org/linux/man-pages/man2/epoll_create1.2.html">epoll_create1(2)</a> 扩展了 <a href="https://man7.org/linux/man-pages/man2/epoll_create.2.html">epoll_create(2)</a>的功能。)
+
+       •指定文件描述符的监听是通过 <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>注册的，即向<b>epoll</b>实例的 interest list 添加项。 
+         
+         
+
+       • <a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a> 等待 I/O 事件，如果当前没有事件产生则阻塞调用的线程。
+         (这个系统调用可以看作是向<b>epoll</b>的 ready list 获取项。
+         
+         
+
+   <b>水平触发(Level-triggered) 和 边缘触发(edge-triggered)</b>
+        <b>epoll </b>事件分派接口即可以是边缘触发 (ET) 也可以是水平触发 (LT)。
+       这两种机制的差异如下所述。
+       假设发生的情形是这样的：
+       
+
+       1. 在同一个<b>epoll</b>实例注册同一个文件描述符两次会发生什么?表示管道读取方的文件描述符
+          (<i>rfd</i>) 注册到 <b>epoll </b>实例。
+
+       2. 管道的写入者在管道的写入端写入 2 kB 的数据。
+          
+
+       3. <a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a> 调用完成并将返回<i>rfd</i>作为就绪文件描述符。
+          
+
+       4. 管道的读取者从<i>rfd</i>读取 1kB 的数据。
+
+       5. <a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>调用完成。
+
+       如果<i>rfd</i>文件描述符是使用<b>EPOLLET </b>(边缘触发)标志加到<b>epoll </b>接口的话，
+       
+       那么在步骤 <b>5 </b>调用完<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>之后将有可能会挂起，即使文件的输入缓冲区内还有数据。
+       
+       与此同时，远端可能还在等待一个针对已经发送过的数据的反馈。
+       因为边缘触发模式只有在被监听的文件描述符发生变化时才会交付事件。
+       
+       所以, 在步骤<b>5</b>调用者可能一直在等待已经在输入缓冲区中存在数据。
+       上方的例子中，一个在<i>rfd</i>的事件将由于步骤<b>2</b>的写入完成而产生，
+       
+       并且在步骤<b>3</b>中消耗掉。因为步骤<b>4</b>的读操作并不会消耗掉整个缓冲区数据，
+       
+       步骤<b>5</b>的<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>调用将无限阻塞。
+       
+
+       一个使用<b>EPOLLET </b>标志的应用程序应该使用
+       非阻塞的文件描述符，避免在处理多个文件描述符时，阻塞的读或写饿死一个任务。
+       
+       建议按以下的方法使用<b>epoll </b>作为边缘触发 (<b>EPOLLET</b>)接口：
+       
+
+       a) 使用非阻塞的文件描述符; 并且
+
+       b) 只有在<a href="https://man7.org/linux/man-pages/man2/read.2.html">read(2)</a>或<a href="https://man7.org/linux/man-pages/man2/write.2.html">write(2)</a>返回<b>EAGAIN</b>后再等待事件。
+          
+
+       相比之比, 当使用水平触发接口时(默认情况下，没有指定<b>EPOLLET </b>)，
+       <b>epoll </b>相当于更快的<a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>，
+       <a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>, 并且可以在任何使用 poll 的地方使用 epoll, 因为它们有相同的语义。
+       
+
+       因为即使使用边缘触发的<b>epoll</b>时, 在收到多个数据块时也会有多个事件产生，
+       
+       调用者可以选择指定<b>EPOLLONESHOT </b>标志，来告诉<b>epoll </b>在<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>收到一个事件后，屏蔽对应的文件描述符。
+       
+       当指定了<b>EPOLLONESHOT </b>标志，
+       使用<a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>和<b>EPOLL_CTL_MOD</b>重新装备文件描述符是调用者的责任。
+       
+
+       如果是多线程(或多进程，子进程通过<a href="https://man7.org/linux/man-pages/man2/fork.2.html">fork(2)</a>继承<b>epoll </b>文件描述符)
+       
+       通过<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>等待相同的 epoll 文件描述符并且有一个
+       设置了边缘触发(<b>EPOLLET</b>)的文件描述符在 interest list 变成了就绪状态，
+       
+       此时只有一个线程(或进程)的<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>被唤醒。
+       这里提供了一个有用的优化，在某些情况下避免“惊群效应”。
+       
+
+   <b>与 autosleep 的交互</b>
+       如果系统通过<i>/sys/power/autosleep</i>进入<b>autosleep </b>模式并且
+       设备从睡眠中唤醒产生了一个事件，这个设备将保持唤醒直到事件进入队列。
+       
+       必须使用 <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a> <b>EPOLLWAKEUP</b>标志来保持设备唤醒直到事件被处理。
+       
+       
+
+       当<i>epoll_event</i>结构的<b>events </b>设置了<b>EPOLLWAKEUP </b>标记，
+       系统将在事件进入队列的那一刻起保持唤醒，
+       通过调用<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>返回事件直至<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>再次被调用。
+       如果事件在那之前一直处于系统唤醒，
+       
+       那么在第二次<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>之前必须单独调用<i>wake_lock</i>。
+
+   <b>/proc 接口</b>
+       下面的接口能用于限制 epoll 消耗的总的内核内存：
+       
+
+       <i>/proc/sys/fs/epoll/max_user_watches</i> (Linux 2.6.28 以后的版本)
+              这个接口指定通过系统的所有 epoll 实例注册的文件描述符的总数。
+              
+              每个真实用户 ID 的限制。
+              每个注册的文件描述符在 32 位内核大约消耗 90 个字节，在 64 位内核大约消耗 160 个字节。
+              
+              一般情况下, <i>max_user_watches</i>的默认值是 1/25(4%) 可能的低位内存，除以注册消耗的字节数。
+              
+              
+
+   <b>建议用法的例子</b>
+       当使用<b>epoll</b>作为水平触发接口时，跟<a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>是一样的语法，
+       
+       边缘触发的用法需要更清晰，避免应用程序的事件循环停顿。
+       在这个例子, 监听者是一个非阻塞的 socket, 由 <a href="https://man7.org/linux/man-pages/man2/listen.2.html">listen(2)</a> 调用。
+       
+       <i>do_use_fd()</i>函数使用新的就绪文件描述符直至  <a href="https://man7.org/linux/man-pages/man2/read.2.html">read(2)</a> 或 <a href="https://man7.org/linux/man-pages/man2/write.2.html">write(2)</a> 返回 <b>EAGAIN </b>。
+       
+       一个事件驱动的状态机应用程序应当在返回 <b>EAGAIN</b> 后，记录它当前的状态，接着调用 <i>do_use_fd()</i> 
+       
+       它将从它之前暂停的地方继续<a href="https://man7.org/linux/man-pages/man2/read.2.html">read(2)</a> 或 <a href="https://man7.org/linux/man-pages/man2/write.2.html">write(2)</a>。
+       
+
+           #define MAX_EVENTS 10
+           struct epoll_event ev, events[MAX_EVENTS];
+           int listen_sock, conn_sock, nfds, epollfd;
+
+           /* Code to set up listening socket, 'listen_sock',
+              (socket(), bind(), listen()) omitted */
+
+           epollfd = epoll_create1(0);
+           if (epollfd == -1) {
+               perror("epoll_create1");
+               exit(EXIT_FAILURE);
+           }
+
+           ev.events = EPOLLIN;
+           ev.data.fd = listen_sock;
+           if (epoll_ctl(epollfd, EPOLL_CTL_ADD, listen_sock, &amp;ev) == -1) {
+               perror("epoll_ctl: listen_sock");
+               exit(EXIT_FAILURE);
+           }
+
+           for (;;) {
+               nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);
+               if (nfds == -1) {
+                   perror("epoll_wait");
+                   exit(EXIT_FAILURE);
+               }
+
+               for (n = 0; n &lt; nfds; ++n) {
+                   if (events[n].data.fd == listen_sock) {
+                       conn_sock = accept(listen_sock,
+                                          (struct sockaddr *) &amp;addr, &amp;addrlen);
+                       if (conn_sock == -1) {
+                           perror("accept");
+                           exit(EXIT_FAILURE);
+                       }
+                       setnonblocking(conn_sock);
+                       ev.events = EPOLLIN | EPOLLET;
+                       ev.data.fd = conn_sock;
+                       if (epoll_ctl(epollfd, EPOLL_CTL_ADD, conn_sock,
+                                   &amp;ev) == -1) {
+                           perror("epoll_ctl: conn_sock");
+                           exit(EXIT_FAILURE);
+                       }
+                   } else {
+                       do_use_fd(events[n].data.fd);
+                   }
+               }
+           }
+
+       当作为边缘触发接口时, 出于性能的考虑，可以通过指定(<b>EPOLLIN</b>|<b>EPOLLOUT</b>)在<b>epoll </b>接口(<b>EPOLL_CTL_ADD</b>)添加一次文件描述符。
+       
+       
+       避免在调用 <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>和<b>EPOLL_CTL_MOD</b>时，来回在<b>EPOLLIN </b>and <b>EPOLLOUT </b>频繁切换。
+       
+       
+
+   <b>Q&amp;A:</b>
+       0.  用什么 key 来区分注册到 interest list 的文件描述符?
+           
+
+           key 是文件描述符编号和打开文件描述(也叫“打开的文件句柄”，内核对打开文件的内部表示)的结合。
+           
+           
+           
+
+       1. 在同一个<b>epoll</b>实例注册同一个文件描述符两次会发生什么?
+           
+
+           你将可能收到<b>EEXIST</b>.  然而可以添加一个重复(<a href="https://man7.org/linux/man-pages/man2/dup.2.html">dup(2)</a>, <a href="https://man7.org/linux/man-pages/man2/dup2.2.html">dup2(2)</a>, <a href="https://man7.org/linux/man-pages/man2/fcntl.2.html">fcntl(2)</a> <b>F_DUPFD</b>)的文件描述符到同一个 <b>epoll </b>实例。
+           
+           这对于过滤事件是一个有用的技术，但重复的文件描述符得用不同的<i>events</i>掩码。
+           
+           
+
+       2.  两个<b>epoll </b>实例能等待同一个文件描述符么？
+           如果可以，文件描述符的事件会一起通知这两个<b>epoll </b>么?
+
+           对，并且事件会一起通知。然而, 要正确做到这一点，可能需要仔细地编程。
+           
+
+       3.  <b>epoll </b>文件描述符本身可以放到 poll/epoll/selectable 去监听?
+
+           可以，如果一个<b>epoll </b>文件描述符有事件在等待，它将标记为可读。
+           
+
+       4.  如果试图将<b>epoll </b>文件描述符放入它自己的文件描述符集会发生什么? 
+           
+
+           <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>调用会返回失败(<b>EINVAL</b>).  不过，你可以将一个<b>epoll </b>文件描述符添加到另一个<b>epoll </b>文件描述符集。
+           
+           
+
+       5.  我能通过 UNIX domain socket 将<b>epoll </b>文件描述符发送到另一个进程么？
+           
+
+           可以，但这样做是没意义的，因为接收进程将无法复制 interest list 中的文件描述符。
+           
+           
+
+       6.  关闭一个文件描述符时，会导致它从<b>epoll </b>的所有 interest list 删除么?
+           
+
+           对，不过要注意下以下这点。文件描述符是一个打开文件描述符的引用 (参考 <a href="https://man7.org/linux/man-pages/man2/open.2.html">open(2)</a>)
+           
+           当一个文件描述符通过<a href="https://man7.org/linux/man-pages/man2/dup.2.html">dup(2)</a>, <a href="https://man7.org/linux/man-pages/man2/dup2.2.html">dup2(2)</a>，<a href="https://man7.org/linux/man-pages/man2/fcntl.2.html">fcntl(2)</a> <b>F_DUPFD</b>, or <a href="https://man7.org/linux/man-pages/man2/fork.2.html">fork(2)</a>被复制时，
+           一个指向相同打开文件的描述符被创建。
+           一个打开的文件描述符将一直存在，直至所有指向它的文件描述符都关闭掉。
+           
+           
+
+           一个文件描述符只有当所有指向下面的打开文件描述符被关闭后，才会从 interest list 删除
+           
+           This means that even
+           在 interest list 里的一个文件描述符关闭之后，
+           
+           如果其它指向同一底层文件描述符的 fd 仍保持打开的话，那么事件也会通知这些 fd。
+           为了防止这种情况发生，文件描述符必须在它复制之前从 interest list 明确删除(使用<a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a> <b>EPOLL_CTL_DEL</b>)。(
+           
+           
+           或者, 应用程序必须确保所有的文件描述符是关闭的
+           
+           如果这些文件描述符在库函数里使用<a href="https://man7.org/linux/man-pages/man2/dup.2.html">dup(2)</a> 或 <a href="https://man7.org/linux/man-pages/man2/fork.2.html">fork(2)</a>进行复制，那么就很难确保)。
+           
+
+       7.  如果在调用<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>期间有多个事件产生，它们是一起通知或逐个通知？
+           
+
+           一起通知。
+
+       8.  在一个文件描述符上面的操作是否会影响已经收集的但还未通知的事件么？
+           
+
+           你可以在一个已经存在的文件描述符上面操作两次。删除在这里是没有意义的。修改后将重读可用的 I/O.
+           
+           
+
+       9.  当使用<b>EPOLLET </b>标志位(边缘触发行为)时，我是否需要连续 read/write 一个文件描述符直至返回<b>EAGAIN </b>？
+           
+
+           接收<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>的一个事件提示你那些文件描述符已经为请求过的 I/O 操作准备就绪。
+           
+           你必须认为它已经就绪，直至下一个 read/write 返回 <b>EAGAIN</b>。
+           何时，如何使用那个文件描述符完全取决于你。
+           
+
+           对于数据包或基于令牌的文件(e.g., 数据报 socket，标准模式的终端)，只有一种方法检测读取 I/O 结束，那就是连续 read/write 直至返回<b>EAGAIN</b>.
+           
+           
+           
+
+           对于基于流的文件(e.g., 通道, FIFO队列, 流式socket),
+           读取 I/O 空间耗尽的条件也可以检查读取/写入目标文件描述符的数据总量
+           
+           例如，如果你调用<a href="https://man7.org/linux/man-pages/man2/read.2.html">read(2)</a>请求读取指定大小的数据，并且<a href="https://man7.org/linux/man-pages/man2/read.2.html">read(2)</a>返回了较少的字节数，你则可以认为这个文件描述符的读 I/O 空间已经没有数据。
+           
+           
+           
+           使用<a href="https://man7.org/linux/man-pages/man2/write.2.html">write(2)</a>时也是如此。(如果不能保证文件描述符总指向基于流式的文件，那么应该避免使用后面的这种技术。)
+           
+           
+
+   <b>存在的陷阱和规避的方法</b>
+       <b>o 饥饿(边沿触发)</b>
+
+       如果有大量的 I/O 空间，尝试耗尽掉它可能，其它文件可能无法被处理，从而导致饥饿。
+       
+       (并非<b>epoll</b>才有这样的问题。)
+
+       解决方案是，维护一个 ready list 并且在文件描述符的相关数据结构标记为就绪状态，
+       
+       从而允许应用程序循环所有就绪文件并标记哪些文件需要去处理。
+       
+       这也支持忽略那些你收到的就绪文件描述符的后续事件。
+       
+
+       <b>o 如果使用事件缓存...</b>
+
+       如果你使用事件缓存或保存所有<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>返回文件描述符，那么你必须确保它自动关闭
+       
+       (也就是说, 前一个事件处理引起的).
+       假设你从<a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>收到 100 个事件，并且在事件 #47 导致事件 #43 关闭掉。
+       如果你删除结构并<a href="https://man7.org/linux/man-pages/man2/close.2.html">close(2)</a>掉事件 #13 的文件描述符，那么你的事件缓存可能仍认为这个文件描述符有事件需要等待，从而导致混乱。
+       
+       
+       
+
+       在处理事件 47 时调用的解决方案是：<b>epoll_ctl</b>(<b>EPOLL_CTL_DEL</b>)删除文件描述符 13 并且<a href="https://man7.org/linux/man-pages/man2/close.2.html">close(2)</a>
+       
+       并且将它相关的数据结构标记为”已删除“并移至 cleanup list。
+       如果你在你的批量处理中找到另一个 fd 13 的事件，你将发现这个 fd 已经被移除，不会产生混淆了。
+       
+       
+       
+</pre>
+<h2><a id="VERSIONS" href="#VERSIONS"></a>VERSIONS  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       The <b>epoll </b>API was introduced in Linux kernel 2.5.44.  Support was
+       added to glibc in version 2.3.2.
+</pre>
+<h2><a id="CONFORMING_TO" href="#CONFORMING_TO"></a>CONFORMING TO  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       The <b>epoll </b>API is Linux-specific.  Some other systems provide
+       similar mechanisms, for example, FreeBSD has <i>kqueue</i>, and Solaris
+       has <i>/dev/poll</i>.
+</pre>
+<h2><a id="NOTES" href="#NOTES"></a>NOTES  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       The set of file descriptors that is being monitored via an epoll
+       file descriptor can be viewed via the entry for the epoll file
+       descriptor in the process's <i>/proc/[pid]/fdinfo</i> directory.  See
+       <a href="https://man7.org/linux/man-pages/man5/proc.5.html">proc(5)</a> for further details.
+
+       The <a href="https://man7.org/linux/man-pages/man2/kcmp.2.html">kcmp(2)</a> <b>KCMP_EPOLL_TFD </b>operation can be used to test whether
+       a file descriptor is present in an epoll instance.
+</pre>
+<h2><a id="SEE_ALSO" href="#SEE_ALSO"></a>SEE ALSO  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       <a href="https://man7.org/linux/man-pages/man2/epoll_create.2.html">epoll_create(2)</a>, <a href="https://man7.org/linux/man-pages/man2/epoll_create1.2.html">epoll_create1(2)</a>, <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>, <a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>,
+       <a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>, <a href="https://man7.org/linux/man-pages/man2/select.2.html">select(2)</a>
+</pre>
+<h2><a id="COLOPHON" href="#COLOPHON"></a>COLOPHON  &nbsp; &nbsp; &nbsp; &nbsp; <a href="#top_of_page"><span class="top-link">top</span></a></h2><pre>       This page is part of release 5.10 of the Linux <i>man-pages</i> project.
+       A description of the project, information about reporting bugs,
+       and the latest version of this page, can be found at
+       <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.
+
+<span class="footline">Linux                          2019-03-06                       EPOLL(7)</span>
+</pre>
+
+<hr class="end-man-text">
+<p>Pages that refer to this page: 
+    <a href="https://man7.org/linux/man-pages/man2/accept.2.html">accept(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/epoll_create.2.html">epoll_create(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/epoll_ctl.2.html">epoll_ctl(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/epoll_wait.2.html">epoll_wait(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/eventfd.2.html">eventfd(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/futex.2.html">futex(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/kcmp.2.html">kcmp(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/open.2.html">open(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/perf_event_open.2.html">perf_event_open(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/perfmonctl.2.html">perfmonctl(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/pidfd_open.2.html">pidfd_open(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/poll.2.html">poll(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/recv.2.html">recv(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/select.2.html">select(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/select_tut.2.html">select_tut(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/signalfd.2.html">signalfd(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/timerfd_create.2.html">timerfd_create(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man2/userfaultfd.2.html">userfaultfd(2)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man3/sd-event.3.html">sd-event(3)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man3/sd_event_add_io.3.html">sd_event_add_io(3)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man3/sd_event_get_fd.3.html">sd_event_get_fd(3)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man5/proc.5.html">proc(5)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man5/systemd.exec.5.html">systemd.exec(5)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/capabilities.7.html">capabilities(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/fanotify.7.html">fanotify(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/inotify.7.html">inotify(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/mq_overview.7.html">mq_overview(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/pipe.7.html">pipe(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/socket.7.html">socket(7)</a>,&nbsp; 
+    <a href="https://man7.org/linux/man-pages/man7/udp.7.html">udp(7)</a>
+</p>
+<hr>
+
+<p class="page-copyright"><a href="https://man7.org/linux/man-pages/man7/epoll.7.license.html">Copyright and license for this manual page</a></p> 
+<hr class="start-footer">
+
+<div class="footer"> 
+
+<table class="colophon-table">
+    <tbody><tr>
+    <td class="pub-info">
+        <p>
+            HTML rendering created 2020-12-21
+            by <a href="https://man7.org/mtk/index.html">Michael Kerrisk</a>, 
+            author of 
+            <a href="https://man7.org/tlpi/"><em>The Linux Programming Interface</em></a>, 
+            maintainer of the 
+            <a href="https://www.kernel.org/doc/man-pages/">Linux <em>man-pages</em> project</a>.
+        </p>
+        <p>
+            For details of in-depth
+            <strong>Linux/UNIX system programming training courses</strong>
+            that I teach, look <a href="https://man7.org/training/">here</a>.
+        </p>
+        <p>
+            Hosting by <a href="https://www.jambit.com/index_en.html">jambit GmbH</a>.
+        </p>
+    </td>
+    <td class="colophon-divider">
+    </td>
+    <td class="tlpi-cover">
+        <a href="https://man7.org/tlpi/"><img src="epoll(7)%20-%20Linux%20manual%20page_files/TLPI-front-cover-vsmall.png" alt="Cover of TLPI"></a>
+    </td>
+    </tr>
+</tbody></table>
+
+</div>
+
+<hr class="end-footer">
+
+
+
+<!--BEGIN-SITETRACKING-->
+<!-- SITETRACKING.man7.org_linux_man-pages -->
+
+<!-- Default Statcounter code for man7.org/linux/man-pages
+http://www.man7.org/linux/man-pages -->
+<script type="text/javascript" async="" src="epoll(7)%20-%20Linux%20manual%20page_files/ga.js"></script>
+<script type="text/javascript" src="epoll(7)%20-%20Linux%20manual%20page_files/counter.js" async=""></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/7422636/0/9b6714ff/1/"
+alt="Web Analytics Made Easy -
+StatCounter"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+
+<!-- Start of Google Analytics Code -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9830363-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End of Google Analytics Code -->
+
+<!--END-SITETRACKING-->
+
+
+
+</body></html>
