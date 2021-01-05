@@ -1,1 +1,3 @@
 # man-pages-translations
+
+test
