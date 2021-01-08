@@ -70,6 +70,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>(This flag is especially useful for</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022921Z" creationid="I/O event notification facility" creationdate="20210106T022706Z">
+        <seg>(这个标志位对于使用边缘触发监听时书写简单代码检测对方关闭特别有用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>(This problem is not specific to <bpt i="136" x="136">&lt;b136&gt;</bpt>epoll<ept i="136">&lt;/b136&gt;</ept>.)</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T083148Z" creationid="I/O event notification facility" creationdate="20210105T083148Z">
@@ -90,6 +98,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T072728Z" creationid="I/O event notification facility" creationdate="20210105T072728Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>(see <bpt i="8" x="8">&lt;a8&gt;</bpt>epoll(7)<ept i="8">&lt;/a8&gt;</ept> and <bpt i="9" x="9">&lt;a9&gt;</bpt>open(2)<ept i="9">&lt;/a9&gt;</ept>), and the settings specified in</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T015503Z" creationid="I/O event notification facility" creationdate="20210106T015013Z">
+        <seg>(参考 <bpt i="8" x="8">&lt;a8&gt;</bpt>epoll(7)<ept i="8">&lt;/a8&gt;</ept> and <bpt i="9" x="9">&lt;a9&gt;</bpt>open(2)<ept i="9">&lt;/a9&gt;</ept>), <bpt i="10" x="10">&lt;i10&gt;</bpt>event<ept i="10">&lt;/i10&gt;</ept>用于指定设置。</seg>
       </tuv>
     </tu>
     <tu>
@@ -182,10 +198,66 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="34" x="34">&lt;a34&gt;</bpt>epoll_wait(2)<ept i="34">&lt;/a34&gt;</ept> will always report for this event; it is not</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T024623Z" creationid="I/O event notification facility" creationdate="20210106T024535Z">
+        <seg><bpt i="34" x="34">&lt;a34&gt;</bpt>epoll_wait(2)<ept i="34">&lt;/a34&gt;</ept>将始终通知这个事件；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="38" x="38">&lt;a38&gt;</bpt>epoll_wait(2)<ept i="38">&lt;/a38&gt;</ept> will always wait for this event; it is not</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025120Z" creationid="I/O event notification facility" creationdate="20210106T025120Z">
+        <seg><bpt i="38" x="38">&lt;a38&gt;</bpt>epoll_wait(2)<ept i="38">&lt;/a38&gt;</ept>将始终等待这个事件；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="46" x="46">&lt;a46&gt;</bpt>epoll_wait(2)<ept i="46">&lt;/a46&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032351Z" creationid="I/O event notification facility" creationdate="20210106T032351Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="46" x="46">&lt;a46&gt;</bpt>poll(2)<ept i="46">&lt;/a46&gt;</ept>, and can be used wherever the latter is used since it</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T153122Z" creationid="I/O event notification facility" creationdate="20210103T153122Z">
         <seg><bpt i="46" x="46">&lt;a46&gt;</bpt>poll(2)<ept i="46">&lt;/a46&gt;</ept>, 并且可以在任何使用 poll 的地方使用 epoll, 因为它们有相同的语义。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="54" x="54">&lt;a54&gt;</bpt>epoll_wait(2)<ept i="54">&lt;/a54&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033145Z" creationid="I/O event notification facility" creationdate="20210106T033145Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="67" x="67">&lt;a67&gt;</bpt>epoll_wait(2)<ept i="67">&lt;/a67&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072923Z" creationid="I/O event notification facility" creationdate="20210108T072923Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="0" x="0">&lt;b0&gt;</bpt>EBADF  <ept i="0">&lt;/b0&gt;</ept><bpt i="1" x="1">&lt;i1&gt;</bpt>epfd<ept i="1">&lt;/i1&gt;</ept> or <bpt i="2" x="2">&lt;i2&gt;</bpt>fd<ept i="2">&lt;/i2&gt;</ept> is not a valid file descriptor.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095542Z" creationid="I/O event notification facility" creationdate="20210108T095542Z">
+        <seg><bpt i="0" x="0">&lt;b0&gt;</bpt>EBADF  <ept i="0">&lt;/b0&gt;</ept><bpt i="1" x="1">&lt;i1&gt;</bpt>epfd<ept i="1">&lt;/i1&gt;</ept> 或 <bpt i="2" x="2">&lt;i2&gt;</bpt>fd<ept i="2">&lt;/i2&gt;</ept> 不是一个合法的文件描述符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="11" x="11">&lt;b11&gt;</bpt>EPOLL_CTL_MOD<ept i="11">&lt;/b11&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T015508Z" creationid="I/O event notification facility" creationdate="20210106T015508Z">
+        <seg><bpt i="11" x="11">&lt;b11&gt;</bpt>EPOLL_CTL_MOD<ept i="11">&lt;/b11&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -222,10 +294,42 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="13" x="13">&lt;b13&gt;</bpt>EINVAL <ept i="13">&lt;/b13&gt;</ept>An invalid event type was specified along with</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100724Z" creationid="I/O event notification facility" creationdate="20210108T100724Z">
+        <seg><bpt i="13" x="13">&lt;b13&gt;</bpt>EINVAL <ept i="13">&lt;/b13&gt;</ept>在<bpt i="15" x="15">&lt;i15&gt;</bpt>events<ept i="15">&lt;/i15&gt;</ept>中指定了与<bpt i="14" x="14">&lt;b14&gt;</bpt>EPOLLEXCLUSIVE <ept i="14">&lt;/b14&gt;</ept>一起的一个非法事件类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="14" x="14">&lt;b14&gt;</bpt>EPOLLEXCLUSIVE <ept i="14">&lt;/b14&gt;</ept>in <bpt i="15" x="15">&lt;i15&gt;</bpt>events<ept i="15">&lt;/i15&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100728Z" creationid="I/O event notification facility" creationdate="20210108T100728Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="14" x="14">&lt;b14&gt;</bpt>EPOLL_CTL_DEL<ept i="14">&lt;/b14&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020352Z" creationid="I/O event notification facility" creationdate="20210106T020352Z">
+        <seg><bpt i="14" x="14">&lt;b14&gt;</bpt>EPOLL_CTL_DEL<ept i="14">&lt;/b14&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="15" x="15">&lt;b15&gt;</bpt>epoll <ept i="15">&lt;/b15&gt;</ept>instance.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210102T154730Z" creationid="I/O event notification facility" creationdate="20210102T154730Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="16" x="16">&lt;b16&gt;</bpt>EINVAL <ept i="16">&lt;/b16&gt;</ept><bpt i="17" x="17">&lt;i17&gt;</bpt>op<ept i="17">&lt;/i17&gt;</ept> was <bpt i="18" x="18">&lt;b18&gt;</bpt>EPOLL_CTL_MOD <ept i="18">&lt;/b18&gt;</ept>and <bpt i="19" x="19">&lt;i19&gt;</bpt>events<ept i="19">&lt;/i19&gt;</ept> included <bpt i="20" x="20">&lt;b20&gt;</bpt>EPOLLEXCLUSIVE<ept i="20">&lt;/b20&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100758Z" creationid="I/O event notification facility" creationdate="20210108T100744Z">
+        <seg><bpt i="16" x="16">&lt;b16&gt;</bpt>EINVAL <ept i="16">&lt;/b16&gt;</ept><bpt i="17" x="17">&lt;i17&gt;</bpt>op<ept i="17">&lt;/i17&gt;</ept>为<bpt i="18" x="18">&lt;b18&gt;</bpt>EPOLL_CTL_MOD <ept i="18">&lt;/b18&gt;</ept>并且 <bpt i="19" x="19">&lt;i19&gt;</bpt>events<ept i="19">&lt;/i19&gt;</ept>包含<bpt i="20" x="20">&lt;b20&gt;</bpt>EPOLLEXCLUSIVE<ept i="20">&lt;/b20&gt;</ept>。</seg>
       </tuv>
     </tu>
     <tu>
@@ -238,10 +342,154 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="21" x="21">&lt;b21&gt;</bpt>EINVAL <ept i="21">&lt;/b21&gt;</ept><bpt i="22" x="22">&lt;i22&gt;</bpt>op<ept i="22">&lt;/i22&gt;</ept> was <bpt i="23" x="23">&lt;b23&gt;</bpt>EPOLL_CTL_MOD <ept i="23">&lt;/b23&gt;</ept>and the <bpt i="24" x="24">&lt;b24&gt;</bpt>EPOLLEXCLUSIVE <ept i="24">&lt;/b24&gt;</ept>flag has</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101047Z" creationid="I/O event notification facility" creationdate="20210108T101047Z">
+        <seg><bpt i="21" x="21">&lt;b21&gt;</bpt>EINVAL <ept i="21">&lt;/b21&gt;</ept><bpt i="22" x="22">&lt;i22&gt;</bpt>op<ept i="22">&lt;/i22&gt;</ept> 为 <bpt i="23" x="23">&lt;b23&gt;</bpt>EPOLL_CTL_MOD <ept i="23">&lt;/b23&gt;</ept>并且之前已经对 <bpt i="25" x="25">&lt;i25&gt;</bpt>epfd<ept i="25">&lt;/i25&gt;</ept>, <bpt i="26" x="26">&lt;i26&gt;</bpt>fd<ept i="26">&lt;/i26&gt;</ept>组合设置过<bpt i="24" x="24">&lt;b24&gt;</bpt>EPOLLEXCLUSIVE <ept i="24">&lt;/b24&gt;</ept>标志。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="25" x="25">&lt;b25&gt;</bpt>EPOLLIN<ept i="25">&lt;/b25&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022209Z" creationid="I/O event notification facility" creationdate="20210106T022209Z">
+        <seg><bpt i="25" x="25">&lt;b25&gt;</bpt>EPOLLIN<ept i="25">&lt;/b25&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="27" x="27">&lt;b27&gt;</bpt>EINVAL EPOLLEXCLUSIVE <ept i="27">&lt;/b27&gt;</ept>was specified in <bpt i="28" x="28">&lt;i28&gt;</bpt>event<ept i="28">&lt;/i28&gt;</ept> and <bpt i="29" x="29">&lt;i29&gt;</bpt>fd<ept i="29">&lt;/i29&gt;</ept> refers to an</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101139Z" creationid="I/O event notification facility" creationdate="20210108T101139Z">
+        <seg>在<bpt i="28" x="28">&lt;i28&gt;</bpt>event<ept i="28">&lt;/i28&gt;</ept>中指定<bpt i="27" x="27">&lt;b27&gt;</bpt>EINVAL EPOLLEXCLUSIVE <ept i="27">&lt;/b27&gt;</ept>并且<bpt i="29" x="29">&lt;i29&gt;</bpt>fd<ept i="29">&lt;/i29&gt;</ept>指向一个 epoll 实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="27" x="27">&lt;b27&gt;</bpt>EPOLLOUT<ept i="27">&lt;/b27&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022400Z" creationid="I/O event notification facility" creationdate="20210106T022400Z">
+        <seg><bpt i="27" x="27">&lt;b27&gt;</bpt>EPOLLOUT<ept i="27">&lt;/b27&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="29" x="29">&lt;b29&gt;</bpt>EPOLLRDHUP <ept i="29">&lt;/b29&gt;</ept>(since Linux 2.6.17)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022442Z" creationid="I/O event notification facility" creationdate="20210106T022442Z">
+        <seg><bpt i="29" x="29">&lt;b29&gt;</bpt>EPOLLRDHUP <ept i="29">&lt;/b29&gt;</ept>(Linux 2.6.17 以后)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="30" x="30">&lt;b30&gt;</bpt>ELOOP  <ept i="30">&lt;/b30&gt;</ept><bpt i="31" x="31">&lt;i31&gt;</bpt>fd<ept i="31">&lt;/i31&gt;</ept> refers to an epoll instance and this <bpt i="32" x="32">&lt;b32&gt;</bpt>EPOLL_CTL_ADD<ept i="32">&lt;/b32&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101533Z" creationid="I/O event notification facility" creationdate="20210108T101533Z">
+        <seg><bpt i="30" x="30">&lt;b30&gt;</bpt>ELOOP  <ept i="30">&lt;/b30&gt;</ept><bpt i="31" x="31">&lt;i31&gt;</bpt>fd<ept i="31">&lt;/i31&gt;</ept>指向一个 epoll 实例并且<bpt i="32" x="32">&lt;b32&gt;</bpt>EPOLL_CTL_ADD<ept i="32">&lt;/b32&gt;</ept>操作将导致 epoll 实例监听另一个的死循环或 epoll 实例的嵌套深度超过 5。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="30" x="30">&lt;b30&gt;</bpt>EPOLLPRI<ept i="30">&lt;/b30&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023030Z" creationid="I/O event notification facility" creationdate="20210106T023030Z">
+        <seg><bpt i="30" x="30">&lt;b30&gt;</bpt>EPOLLPRI<ept i="30">&lt;/b30&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="33" x="33">&lt;b33&gt;</bpt>ENOENT <ept i="33">&lt;/b33&gt;</ept><bpt i="34" x="34">&lt;i34&gt;</bpt>op<ept i="34">&lt;/i34&gt;</ept> was <bpt i="35" x="35">&lt;b35&gt;</bpt>EPOLL_CTL_MOD <ept i="35">&lt;/b35&gt;</ept>or <bpt i="36" x="36">&lt;b36&gt;</bpt>EPOLL_CTL_DEL<ept i="36">&lt;/b36&gt;</ept>, and <bpt i="37" x="37">&lt;i37&gt;</bpt>fd<ept i="37">&lt;/i37&gt;</ept> is not</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101624Z" creationid="I/O event notification facility" creationdate="20210108T101624Z">
+        <seg><bpt i="33" x="33">&lt;b33&gt;</bpt>ENOENT <ept i="33">&lt;/b33&gt;</ept><bpt i="34" x="34">&lt;i34&gt;</bpt>op<ept i="34">&lt;/i34&gt;</ept> 为<bpt i="35" x="35">&lt;b35&gt;</bpt>EPOLL_CTL_MOD <ept i="35">&lt;/b35&gt;</ept>或<bpt i="36" x="36">&lt;b36&gt;</bpt>EPOLL_CTL_DEL<ept i="36">&lt;/b36&gt;</ept>，并且<bpt i="37" x="37">&lt;i37&gt;</bpt>fd<ept i="37">&lt;/i37&gt;</ept>没有注册到 epoll 实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="33" x="33">&lt;b33&gt;</bpt>EPOLLERR<ept i="33">&lt;/b33&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023759Z" creationid="I/O event notification facility" creationdate="20210106T023759Z">
+        <seg><bpt i="33" x="33">&lt;b33&gt;</bpt>EPOLLERR<ept i="33">&lt;/b33&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="37" x="37">&lt;b37&gt;</bpt>EPOLLHUP<ept i="37">&lt;/b37&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T024741Z" creationid="I/O event notification facility" creationdate="20210106T024741Z">
+        <seg><bpt i="37" x="37">&lt;b37&gt;</bpt>EPOLLHUP<ept i="37">&lt;/b37&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="38" x="38">&lt;b38&gt;</bpt>ENOMEM <ept i="38">&lt;/b38&gt;</ept>There was insufficient memory to handle the requested <bpt i="39" x="39">&lt;i39&gt;</bpt>op<ept i="39">&lt;/i39&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101727Z" creationid="I/O event notification facility" creationdate="20210108T101724Z">
+        <seg><bpt i="38" x="38">&lt;b38&gt;</bpt>ENOMEM <ept i="38">&lt;/b38&gt;</ept>没有足够内存用于请求<bpt i="39" x="39">&lt;i39&gt;</bpt>op<ept i="39">&lt;/i39&gt;</ept>控制操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="3" x="3">&lt;b3&gt;</bpt>EEXIST <ept i="3">&lt;/b3&gt;</ept><bpt i="4" x="4">&lt;i4&gt;</bpt>op<ept i="4">&lt;/i4&gt;</ept> was <bpt i="5" x="5">&lt;b5&gt;</bpt>EPOLL_CTL_ADD<ept i="5">&lt;/b5&gt;</ept>, and the supplied file descriptor <bpt i="6" x="6">&lt;i6&gt;</bpt>fd<ept i="6">&lt;/i6&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100314Z" creationid="I/O event notification facility" creationdate="20210108T100314Z">
+        <seg><bpt i="3" x="3">&lt;b3&gt;</bpt>EEXIST <ept i="3">&lt;/b3&gt;</ept><bpt i="4" x="4">&lt;i4&gt;</bpt>op<ept i="4">&lt;/i4&gt;</ept> 为 <bpt i="5" x="5">&lt;b5&gt;</bpt>EPOLL_CTL_ADD<ept i="5">&lt;/b5&gt;</ept>并且提供的文件描述符<bpt i="6" x="6">&lt;i6&gt;</bpt>fd<ept i="6">&lt;/i6&gt;</ept>已经注册到 epoll 实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="40" x="40">&lt;b40&gt;</bpt>ENOSPC <ept i="40">&lt;/b40&gt;</ept>The limit imposed by <bpt i="41" x="41">&lt;i41&gt;</bpt>/proc/sys/fs/epoll/max_user_watches<ept i="41">&lt;/i41&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102017Z" creationid="I/O event notification facility" creationdate="20210108T102017Z">
+        <seg><bpt i="40" x="40">&lt;b40&gt;</bpt>ENOSPC <ept i="40">&lt;/b40&gt;</ept>当尝试注册(<bpt i="42" x="42">&lt;b42&gt;</bpt>EPOLL_CTL_ADD<ept i="42">&lt;/b42&gt;</ept>)一个新的文件描述符到一个 epoll 实例时，达到 <bpt i="41" x="41">&lt;i41&gt;</bpt>/proc/sys/fs/epoll/max_user_watches<ept i="41">&lt;/i41&gt;</ept> 上限。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="41" x="41">&lt;b41&gt;</bpt>EPOLLET<ept i="41">&lt;/b41&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032005Z" creationid="I/O event notification facility" creationdate="20210106T032005Z">
+        <seg><bpt i="41" x="41">&lt;b41&gt;</bpt>EPOLLET<ept i="41">&lt;/b41&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="43" x="43">&lt;b43&gt;</bpt>EAGAIN<ept i="43">&lt;/b43&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T151725Z" creationid="I/O event notification facility" creationdate="20210103T151725Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="44" x="44">&lt;b44&gt;</bpt>EPERM  <ept i="44">&lt;/b44&gt;</ept>The target file <bpt i="45" x="45">&lt;i45&gt;</bpt>fd<ept i="45">&lt;/i45&gt;</ept> does not support <bpt i="46" x="46">&lt;b46&gt;</bpt>epoll<ept i="46">&lt;/b46&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102105Z" creationid="I/O event notification facility" creationdate="20210108T102105Z">
+        <seg><bpt i="44" x="44">&lt;b44&gt;</bpt>EPERM  <ept i="44">&lt;/b44&gt;</ept>目标文件<bpt i="45" x="45">&lt;i45&gt;</bpt>fd<ept i="45">&lt;/i45&gt;</ept>不支持<bpt i="46" x="46">&lt;b46&gt;</bpt>epoll<ept i="46">&lt;/b46&gt;</ept>。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="47" x="47">&lt;b47&gt;</bpt>EPOLLONESHOT <ept i="47">&lt;/b47&gt;</ept>(since Linux 2.6.2)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032408Z" creationid="I/O event notification facility" creationdate="20210106T032408Z">
+        <seg><bpt i="47" x="47">&lt;b47&gt;</bpt>EPOLLONESHOT <ept i="47">&lt;/b47&gt;</ept>(Linux 2.6.2 以后)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="50" x="50">&lt;b50&gt;</bpt>epoll_ctl<ept i="50">&lt;/b50&gt;</ept>() with <bpt i="51" x="51">&lt;b51&gt;</bpt>EPOLL_CTL_MOD <ept i="51">&lt;/b51&gt;</ept>to rearm the file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032959Z" creationid="I/O event notification facility" creationdate="20210106T032959Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="55" x="55">&lt;b55&gt;</bpt>EPOLLWAKEUP <ept i="55">&lt;/b55&gt;</ept>(since Linux 3.5)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033155Z" creationid="I/O event notification facility" creationdate="20210106T033155Z">
+        <seg><bpt i="55" x="55">&lt;b55&gt;</bpt>EPOLLWAKEUP <ept i="55">&lt;/b55&gt;</ept>(Linux 3.5 以后)</seg>
       </tuv>
     </tu>
     <tu>
@@ -254,10 +502,34 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="5" x="5">&lt;b5&gt;</bpt>EPOLL_CTL_ADD<ept i="5">&lt;/b5&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T014630Z" creationid="I/O event notification facility" creationdate="20210106T014630Z">
+        <seg><bpt i="5" x="5">&lt;b5&gt;</bpt>EPOLL_CTL_ADD<ept i="5">&lt;/b5&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="68" x="68">&lt;b68&gt;</bpt>EPOLLEXCLUSIVE <ept i="68">&lt;/b68&gt;</ept>(since Linux 4.5)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072937Z" creationid="I/O event notification facility" creationdate="20210108T072937Z">
+        <seg><bpt i="68" x="68">&lt;b68&gt;</bpt>EPOLLEXCLUSIVE <ept i="68">&lt;/b68&gt;</ept>(Linux 4.5 之后)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="72" x="72">&lt;b72&gt;</bpt>/proc interfaces<ept i="72">&lt;/b72&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T062107Z" creationid="I/O event notification facility" creationdate="20210104T062107Z">
         <seg><bpt i="72" x="72">&lt;b72&gt;</bpt>/proc 接口<ept i="72">&lt;/b72&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="73" x="73">&lt;b73&gt;</bpt>EPOLLEXCLUSIVE <ept i="73">&lt;/b73&gt;</ept>is thus useful for avoiding thundering herd</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081145Z" creationid="I/O event notification facility" creationdate="20210108T081121Z">
+        <seg>因此，<bpt i="73" x="73">&lt;b73&gt;</bpt>EPOLLEXCLUSIVE <ept i="73">&lt;/b73&gt;</ept>在避免某些情况下的惊群效应问题很有用。</seg>
       </tuv>
     </tu>
     <tu>
@@ -270,10 +542,50 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="76" x="76">&lt;b76&gt;</bpt>EPOLLEXCLUSIVE<ept i="76">&lt;/b76&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081606Z" creationid="I/O event notification facility" creationdate="20210108T081606Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="77" x="77">&lt;b77&gt;</bpt>EPOLLEXCLUSIVE<ept i="77">&lt;/b77&gt;</ept>: <bpt i="78" x="78">&lt;b78&gt;</bpt>EPOLLIN<ept i="78">&lt;/b78&gt;</ept>, <bpt i="79" x="79">&lt;b79&gt;</bpt>EPOLLOUT<ept i="79">&lt;/b79&gt;</ept>, <bpt i="80" x="80">&lt;b80&gt;</bpt>EPOLLWAKEUP<ept i="80">&lt;/b80&gt;</ept>, and</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081847Z" creationid="I/O event notification facility" creationdate="20210108T081847Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="7" x="7">&lt;b7&gt;</bpt>EINVAL <ept i="7">&lt;/b7&gt;</ept><bpt i="8" x="8">&lt;i8&gt;</bpt>epfd<ept i="8">&lt;/i8&gt;</ept> is not an <bpt i="9" x="9">&lt;b9&gt;</bpt>epoll <ept i="9">&lt;/b9&gt;</ept>file descriptor, or <bpt i="10" x="10">&lt;i10&gt;</bpt>fd<ept i="10">&lt;/i10&gt;</ept> is the same as</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100439Z" creationid="I/O event notification facility" creationdate="20210108T100437Z">
+        <seg><bpt i="7" x="7">&lt;b7&gt;</bpt>EINVAL <ept i="7">&lt;/b7&gt;</ept><bpt i="8" x="8">&lt;i8&gt;</bpt>epfd<ept i="8">&lt;/i8&gt;</ept>不是一个<bpt i="9" x="9">&lt;b9&gt;</bpt>epoll <ept i="9">&lt;/b9&gt;</ept>文件描述符或<bpt i="10" x="10">&lt;i10&gt;</bpt>fd<ept i="10">&lt;/i10&gt;</ept>也不是文件描述符，或这个接口不支持请求的操作<bpt i="12" x="12">&lt;i12&gt;</bpt>op<ept i="12">&lt;/i12&gt;</ept>。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="80" x="80">&lt;b80&gt;</bpt>EAGAIN <ept i="80">&lt;/b80&gt;</ept>is returned by either <bpt i="81" x="81">&lt;a81&gt;</bpt>read(2)<ept i="81">&lt;/a81&gt;</ept> or <bpt i="82" x="82">&lt;a82&gt;</bpt>write(2)<ept i="82">&lt;/a82&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T073755Z" creationid="I/O event notification facility" creationdate="20210104T073755Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="81" x="81">&lt;b81&gt;</bpt>EPOLLET<ept i="81">&lt;/b81&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081850Z" creationid="I/O event notification facility" creationdate="20210108T081850Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="82" x="82">&lt;b82&gt;</bpt>EPOLLHUP <ept i="82">&lt;/b82&gt;</ept>and <bpt i="83" x="83">&lt;b83&gt;</bpt>EPOLLERR <ept i="83">&lt;/b83&gt;</ept>can also be specified, but</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T082009Z" creationid="I/O event notification facility" creationdate="20210108T082009Z">
+        <seg><bpt i="82" x="82">&lt;b82&gt;</bpt>EPOLLHUP <ept i="82">&lt;/b82&gt;</ept>和 <bpt i="83" x="83">&lt;b83&gt;</bpt>EPOLLERR <ept i="83">&lt;/b83&gt;</ept>也可以指定，但没有必要：因为通常这些事件当他们发生时始终会通知，</seg>
       </tuv>
     </tu>
     <tu>
@@ -286,10 +598,26 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="87" x="87">&lt;b87&gt;</bpt>EPOLLEXCLUSIVE <ept i="87">&lt;/b87&gt;</ept>may be used only in an <bpt i="88" x="88">&lt;b88&gt;</bpt>EPOLL_CTL_ADD<ept i="88">&lt;/b88&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084352Z" creationid="I/O event notification facility" creationdate="20210108T084352Z">
+        <seg><bpt i="87" x="87">&lt;b87&gt;</bpt>EPOLLEXCLUSIVE <ept i="87">&lt;/b87&gt;</ept>只可以用于<bpt i="88" x="88">&lt;b88&gt;</bpt>EPOLL_CTL_ADD<ept i="88">&lt;/b88&gt;</ept>操作；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="87" x="87">&lt;b87&gt;</bpt>epoll <ept i="87">&lt;/b87&gt;</ept>interface (<bpt i="88" x="88">&lt;b88&gt;</bpt>EPOLL_CTL_ADD<ept i="88">&lt;/b88&gt;</ept>) once by specifying</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T124026Z" creationid="I/O event notification facility" creationdate="20210104T124026Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="91" x="91">&lt;b91&gt;</bpt>epoll_ctl<ept i="91">&lt;/b91&gt;</ept>(), then a subsequent <bpt i="92" x="92">&lt;b92&gt;</bpt>EPOLL_CTL_MOD <ept i="92">&lt;/b92&gt;</ept>on the same</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084641Z" creationid="I/O event notification facility" creationdate="20210108T084641Z">
+        <seg>那么之后在同一个<bpt i="93" x="93">&lt;i93&gt;</bpt>epfd<ept i="93">&lt;/i93&gt;</ept>，<bpt i="94" x="94">&lt;i94&gt;</bpt>fd<ept i="94">&lt;/i94&gt;</ept>组合的<bpt i="92" x="92">&lt;b92&gt;</bpt>EPOLL_CTL_MOD <ept i="92">&lt;/b92&gt;</ept>将报错。</seg>
       </tuv>
     </tu>
     <tu>
@@ -326,6 +654,30 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="101" x="101">&lt;i101&gt;</bpt>event.events<ept i="101">&lt;/i101&gt;</ept> field when calling <bpt i="102" x="102">&lt;b102&gt;</bpt>epoll_ctl<ept i="102">&lt;/b102&gt;</ept>(); it is never</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095204Z" creationid="I/O event notification facility" creationdate="20210108T095204Z">
+        <seg>它永远不会通过<bpt i="103" x="103">&lt;a103&gt;</bpt>epoll_wait(2)<ept i="103">&lt;/a103&gt;</ept>返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="10" x="10">&lt;i10&gt;</bpt>event<ept i="10">&lt;/i10&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T015322Z" creationid="I/O event notification facility" creationdate="20210106T015322Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="11" x="11">&lt;i11&gt;</bpt>epfd<ept i="11">&lt;/i11&gt;</ept>, or the requested operation <bpt i="12" x="12">&lt;i12&gt;</bpt>op<ept i="12">&lt;/i12&gt;</ept> is not supported by</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100442Z" creationid="I/O event notification facility" creationdate="20210108T100442Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="67" x="67">&lt;i67&gt;</bpt>epoll_event<ept i="67">&lt;/i67&gt;</ept>, the system will be kept awake from the moment the</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T041202Z" creationid="I/O event notification facility" creationdate="20210104T041202Z">
@@ -350,10 +702,34 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg><bpt i="7" x="7">&lt;i7&gt;</bpt>fd<ept i="7">&lt;/i7&gt;</ept>, a reference to the corresponding open file description</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T015242Z" creationid="I/O event notification facility" creationdate="20210106T015003Z">
+        <seg><bpt i="7" x="7">&lt;i7&gt;</bpt>fd<ept i="7">&lt;/i7&gt;</ept>表示相应打开文件描述符的一个引用</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg><bpt i="84" x="84">&lt;i84&gt;</bpt>do_use_fd()<ept i="84">&lt;/i84&gt;</ept> it will continue to <bpt i="85" x="85">&lt;a85&gt;</bpt>read(2)<ept i="85">&lt;/a85&gt;</ept> or <bpt i="86" x="86">&lt;a86&gt;</bpt>write(2)<ept i="86">&lt;/a86&gt;</ept> from where it</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T074314Z" creationid="I/O event notification facility" creationdate="20210104T074314Z">
         <seg>它将从它之前暂停的地方继续<bpt i="85" x="85">&lt;a85&gt;</bpt>read(2)<ept i="85">&lt;/a85&gt;</ept> 或 <bpt i="86" x="86">&lt;a86&gt;</bpt>write(2)<ept i="86">&lt;/a86&gt;</ept>。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="85" x="85">&lt;i85&gt;</bpt>events<ept i="85">&lt;/i85&gt;</ept> yield the error <bpt i="86" x="86">&lt;b86&gt;</bpt>EINVAL<ept i="86">&lt;/b86&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084329Z" creationid="I/O event notification facility" creationdate="20210108T084329Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg><bpt i="93" x="93">&lt;i93&gt;</bpt>epfd<ept i="93">&lt;/i93&gt;</ept>, <bpt i="94" x="94">&lt;i94&gt;</bpt>fd<ept i="94">&lt;/i94&gt;</ept> pair yields an error.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084647Z" creationid="I/O event notification facility" creationdate="20210108T084647Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -370,6 +746,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T025629Z" creationid="I/O event notification facility" creationdate="20210103T025629Z">
         <seg><bpt i="25" x="25">&lt;a25&gt;</bpt>epoll_wait(2)<ept i="25">&lt;/a25&gt;</ept>调用完成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>A call to <bpt i="95" x="95">&lt;b95&gt;</bpt>epoll_ctl<ept i="95">&lt;/b95&gt;</ept>() that</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T092344Z" creationid="I/O event notification facility" creationdate="20210108T092344Z">
+        <seg>一个<bpt i="95" x="95">&lt;b95&gt;</bpt>epoll_ctl<ept i="95">&lt;/b95&gt;</ept>()调用，如果在<bpt i="97" x="97">&lt;i97&gt;</bpt>events<ept i="97">&lt;/i97&gt;</ept>中指定了<bpt i="96" x="96">&lt;b96&gt;</bpt>EPOLLEXCLUSIVE <ept i="96">&lt;/b96&gt;</ept>并且指定目标文件描述符<bpt i="98" x="98">&lt;i98&gt;</bpt>fd<ept i="98">&lt;/i98&gt;</ept>作为 epoll 实例，也同样会失败。</seg>
       </tuv>
     </tu>
     <tu>
@@ -394,6 +778,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T025336Z" creationid="I/O event notification facility" creationdate="20210103T025336Z">
         <seg>管道的写入者在管道的写入端写入 2 kB 的数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Add an entry to the interest list of the epoll file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T014741Z" creationid="I/O event notification facility" creationdate="20210106T014717Z">
+        <seg>增加一个条目到 epoll 文件描述符<bpt i="6" x="6">&lt;i6&gt;</bpt>epfd<ept i="6">&lt;/i6&gt;</ept>的兴趣列表。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -430,6 +822,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Attempts to specify other values in</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084325Z" creationid="I/O event notification facility" creationdate="20210108T084325Z">
+        <seg>试图在<bpt i="85" x="85">&lt;i85&gt;</bpt>events<ept i="85">&lt;/i85&gt;</ept>指定其它值会收到错误<bpt i="86" x="86">&lt;b86&gt;</bpt>EINVAL<ept i="86">&lt;/b86&gt;</ept>。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>By contrast, when used as a level-triggered interface (the</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T152554Z" creationid="I/O event notification facility" creationdate="20210103T152437Z">
@@ -450,6 +850,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T033557Z" creationid="I/O event notification facility" creationdate="20210105T033557Z">
         <seg>两个<bpt i="104" x="104">&lt;b104&gt;</bpt>epoll <ept i="104">&lt;/b104&gt;</ept>实例能等待同一个文件描述符么？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Change the settings associated with <bpt i="12" x="12">&lt;i12&gt;</bpt>fd<ept i="12">&lt;/i12&gt;</ept> in the interest</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020521Z" creationid="I/O event notification facility" creationdate="20210106T015554Z">
+        <seg>将兴趣列表中的<bpt i="12" x="12">&lt;i12&gt;</bpt>fd<ept i="12">&lt;/i12&gt;</ept>关联的设置更改为新的指定设置<bpt i="13" x="13">&lt;i13&gt;</bpt>event<ept i="13">&lt;/i13&gt;</ept>。</seg>
       </tuv>
     </tu>
     <tu>
@@ -486,10 +894,26 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>ERRORS         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095523Z" creationid="I/O event notification facility" creationdate="20210108T095523Z">
+        <seg>错误         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Each registered file descriptor costs roughly 90 bytes on</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T064846Z" creationid="I/O event notification facility" creationdate="20210104T064846Z">
         <seg>每个注册的文件描述符在 32 位内核大约消耗 90 个字节，在 64 位内核大约消耗 160 个字节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Error condition happened on the associated file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023908Z" creationid="I/O event notification facility" creationdate="20210106T023908Z">
+        <seg>相关的文件描述符有错误发生。</seg>
       </tuv>
     </tu>
     <tu>
@@ -514,6 +938,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T075620Z" creationid="I/O event notification facility" creationdate="20210105T075620Z">
         <seg>对于基于流的文件(e.g., 通道, FIFO队列, 流式socket),</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Hang up happened on the associated file descriptor.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025034Z" creationid="I/O event notification facility" creationdate="20210106T025034Z">
+        <seg>关联的文件描述符发生挂断。</seg>
       </tuv>
     </tu>
     <tu>
@@ -546,6 +978,22 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T091728Z" creationid="I/O event notification facility" creationdate="20210105T091728Z">
         <seg>如果你删除结构并<bpt i="140" x="140">&lt;a140&gt;</bpt>close(2)<ept i="140">&lt;/a140&gt;</ept>掉事件 #13 的文件描述符，那么你的事件缓存可能仍认为这个文件描述符有事件需要等待，从而导致混乱。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If <bpt i="56" x="56">&lt;b56&gt;</bpt>EPOLLONESHOT <ept i="56">&lt;/b56&gt;</ept>and <bpt i="57" x="57">&lt;b57&gt;</bpt>EPOLLET <ept i="57">&lt;/b57&gt;</ept>are clear and the process has</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033653Z" creationid="I/O event notification facility" creationdate="20210106T033412Z">
+        <seg>如果清除<bpt i="56" x="56">&lt;b56&gt;</bpt>EPOLLONESHOT <ept i="56">&lt;/b56&gt;</ept>和<bpt i="57" x="57">&lt;b57&gt;</bpt>EPOLLET <ept i="57">&lt;/b57&gt;</ept>并且该进程有<bpt i="58" x="58">&lt;b58&gt;</bpt>CAP_BLOCK_SUSPEND <ept i="58">&lt;/b58&gt;</ept>功能，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If <bpt i="90" x="90">&lt;b90&gt;</bpt>EPOLLEXCLUSIVE <ept i="90">&lt;/b90&gt;</ept>has been set using</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084456Z" creationid="I/O event notification facility" creationdate="20210108T084456Z">
+        <seg>如果已经用<bpt i="91" x="91">&lt;b91&gt;</bpt>epoll_ctl<ept i="91">&lt;/b91&gt;</ept>()设置了<bpt i="90" x="90">&lt;b90&gt;</bpt>EPOLLEXCLUSIVE <ept i="90">&lt;/b90&gt;</ept>，</seg>
       </tuv>
     </tu>
     <tu>
@@ -594,6 +1042,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T042310Z" creationid="I/O event notification facility" creationdate="20210104T042310Z">
         <seg>如果事件在那之前一直处于系统唤醒，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>If the same file descriptor is in multiple epoll</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081243Z" creationid="I/O event notification facility" creationdate="20210108T081243Z">
+        <seg>如果相同的文件描述符在多个 epoll 实例，一些设置了<bpt i="74" x="74">&lt;b74&gt;</bpt>EPOLLEXCLUSIVE <ept i="74">&lt;/b74&gt;</ept>标志，而一些没有，</seg>
       </tuv>
     </tu>
     <tu>
@@ -654,6 +1110,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>It requests that the operation <bpt i="2" x="2">&lt;i2&gt;</bpt>op<ept i="2">&lt;/i2&gt;</ept> be performed</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013656Z" creationid="I/O event notification facility" creationdate="20210106T013656Z">
+        <seg><bpt i="2" x="2">&lt;i2&gt;</bpt>op<ept i="2">&lt;/i2&gt;</ept>表示对目标文件描述符<bpt i="3" x="3">&lt;i3&gt;</bpt>fd<ept i="3">&lt;/i3&gt;</ept>的操作请求，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Modify will</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T071525Z" creationid="I/O event notification facility" creationdate="20210105T071525Z">
@@ -670,10 +1134,34 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>NULL (but see BUGS below).</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020800Z" creationid="I/O event notification facility" creationdate="20210106T020800Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Note that when reading from a channel such as a pipe or a</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025529Z" creationid="I/O event notification facility" creationdate="20210106T025244Z">
+        <seg>注意当从通道(例如: 管道或流套节字)读取时，这个事件仅表示对方关闭了其通道的终端。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>One solution for this is to call, during the processing of event</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T092118Z" creationid="I/O event notification facility" creationdate="20210105T092030Z">
         <seg>在处理事件 47 时调用的解决方案是：<bpt i="141" x="141">&lt;b141&gt;</bpt>epoll_ctl<ept i="141">&lt;/b141&gt;</ept>(<bpt i="142" x="142">&lt;b142&gt;</bpt>EPOLL_CTL_DEL<ept i="142">&lt;/b142&gt;</ept>)删除文件描述符 13 并且<bpt i="143" x="143">&lt;a143&gt;</bpt>close(2)<ept i="143">&lt;/a143&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>RETURN VALUE         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095406Z" creationid="I/O event notification facility" creationdate="20210108T095406Z">
+        <seg>返回值         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -686,6 +1174,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Remove (deregister) the target file descriptor <bpt i="15" x="15">&lt;i15&gt;</bpt>fd<ept i="15">&lt;/i15&gt;</ept> from the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020645Z" creationid="I/O event notification facility" creationdate="20210106T020559Z">
+        <seg>从兴趣列表中删除(注销)目标文件描述符<bpt i="15" x="15">&lt;i15&gt;</bpt>fd<ept i="15">&lt;/i15&gt;</ept>.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>Remove would be meaningless for this case.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T071522Z" creationid="I/O event notification facility" creationdate="20210105T071522Z">
@@ -694,10 +1190,66 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>Requests edge-triggered notification for the associated</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032108Z" creationid="I/O event notification facility" creationdate="20210106T032108Z">
+        <seg>请求相关文件描述符的边缘触发通知。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Requests one-shot notification for the associated file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032507Z" creationid="I/O event notification facility" creationdate="20210106T032436Z">
+        <seg>请求相关文件描述符的单次通知。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>SYNOPSIS         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T134054Z" creationid="kinbei" creationdate="20210102T134054Z">
         <seg>概要         <bpt i="0" x="0">&lt;a0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>top<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/a0&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>See <bpt i="43" x="43">&lt;a43&gt;</bpt>epoll(7)<ept i="43">&lt;/a43&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102041Z" creationid="I/O event notification facility" creationdate="20210108T102041Z">
+        <seg>详情请参阅 <bpt i="43" x="43">&lt;a43&gt;</bpt>epoll(7)<ept i="43">&lt;/a43&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>See <bpt i="43" x="43">&lt;a43&gt;</bpt>epoll(7)<ept i="43">&lt;/a43&gt;</ept> for more detailed information</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032233Z" creationid="I/O event notification facility" creationdate="20210106T032205Z">
+        <seg>详见<bpt i="43" x="43">&lt;a43&gt;</bpt>epoll(7)<ept i="43">&lt;/a43&gt;</ept>关于边缘触发和水平触发通知。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>See also BUGS.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072355Z" creationid="I/O event notification facility" creationdate="20210108T072355Z">
+        <seg>参阅 BUGS。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>See the discussion of <bpt i="31" x="31">&lt;b31&gt;</bpt>POLLPRI <ept i="31">&lt;/b31&gt;</ept>in <bpt i="32" x="32">&lt;a32&gt;</bpt>poll(2)<ept i="32">&lt;/a32&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023741Z" creationid="I/O event notification facility" creationdate="20210106T023741Z">
+        <seg>详见<bpt i="32" x="32">&lt;a32&gt;</bpt>poll(2)<ept i="32">&lt;/a32&gt;</ept>中<bpt i="31" x="31">&lt;b31&gt;</bpt>POLLPRI <ept i="31">&lt;/b31&gt;</ept>的讨论。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Sets an exclusive wakeup mode for the epoll file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T075554Z" creationid="I/O event notification facility" creationdate="20210108T074636Z">
+        <seg>给附加到目标文件描述符<bpt i="69" x="69">&lt;i69&gt;</bpt>fd<ept i="69">&lt;/i69&gt;</ept>的 epoll 文件描述符设置排它唤醒模式。</seg>
       </tuv>
     </tu>
     <tu>
@@ -722,6 +1274,22 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T145933Z" creationid="I/O event notification facility" creationdate="20210103T140152Z">
         <seg>所以, 在步骤<bpt i="31" x="31">&lt;b31&gt;</bpt>5<ept i="31">&lt;/b31&gt;</ept>调用者可能一直在等待已经在输入缓冲区中存在数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Stream socket peer closed connection, or shut down writing</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023021Z" creationid="I/O event notification facility" creationdate="20210106T022553Z">
+        <seg>流套节字对等方关闭链接，或关闭未写完的链接。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Subsequent reads from the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T030520Z" creationid="I/O event notification facility" creationdate="20210106T030227Z">
+        <seg>只有在消耗完通道所有未处理的数据后，通道的后续读取会返回 0 (文件的尾端)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -766,6 +1334,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The <bpt i="100" x="100">&lt;b100&gt;</bpt>EPOLLEXCLUSIVE <ept i="100">&lt;/b100&gt;</ept>flag is an input flag for the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095150Z" creationid="I/O event notification facility" creationdate="20210108T095150Z">
+        <seg>当调用<bpt i="102" x="102">&lt;b102&gt;</bpt>epoll_ctl<ept i="102">&lt;/b102&gt;</ept>()时，<bpt i="100" x="100">&lt;b100&gt;</bpt>EPOLLEXCLUSIVE <ept i="100">&lt;/b100&gt;</ept>是<bpt i="101" x="101">&lt;i101&gt;</bpt>event.events<ept i="101">&lt;/i101&gt;</ept>字段的一个输入标志；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The <bpt i="19" x="19">&lt;b19&gt;</bpt>epoll <ept i="19">&lt;/b19&gt;</ept>event distribution interface is able to behave both as</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T004928Z" creationid="I/O event notification facility" creationdate="20210103T004849Z">
@@ -782,6 +1358,62 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The <bpt i="16" x="16">&lt;i16&gt;</bpt>event<ept i="16">&lt;/i16&gt;</ept> argument is ignored and can be</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020756Z" creationid="I/O event notification facility" creationdate="20210106T020751Z">
+        <seg><bpt i="16" x="16">&lt;i16&gt;</bpt>event<ept i="16">&lt;/i16&gt;</ept>参数不处理，可以设置为 NULL(具体详见下方 BUGS)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="17" x="17">&lt;i17&gt;</bpt>event<ept i="17">&lt;/i17&gt;</ept> argument describes the object linked to the file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020853Z" creationid="I/O event notification facility" creationdate="20210106T020853Z">
+        <seg><bpt i="17" x="17">&lt;i17&gt;</bpt>event<ept i="17">&lt;/i17&gt;</ept>参数表示关联到文件描述符<bpt i="18" x="18">&lt;i18&gt;</bpt>fd<ept i="18">&lt;/i18&gt;</ept>的对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="19" x="19">&lt;i19&gt;</bpt>struct epoll_event<ept i="19">&lt;/i19&gt;</ept> is defined as:</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020912Z" creationid="I/O event notification facility" creationdate="20210106T020912Z">
+        <seg><bpt i="19" x="19">&lt;i19&gt;</bpt>struct epoll_event<ept i="19">&lt;/i19&gt;</ept>定义如下：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="20" x="20">&lt;i20&gt;</bpt>data<ept i="20">&lt;/i20&gt;</ept> member of the <bpt i="21" x="21">&lt;i21&gt;</bpt>epoll_event<ept i="21">&lt;/i21&gt;</ept> structure specifies data that</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021550Z" creationid="I/O event notification facility" creationdate="20210106T021239Z">
+        <seg><bpt i="21" x="21">&lt;i21&gt;</bpt>epoll_event<ept i="21">&lt;/i21&gt;</ept>结构的<bpt i="20" x="20">&lt;i20&gt;</bpt>data<ept i="20">&lt;/i20&gt;</ept>成员指定内核保存的数据，然后在文件描述符准备就绪时返回(通过<bpt i="22" x="22">&lt;a22&gt;</bpt>epoll_wait(2)<ept i="22">&lt;/a22&gt;</ept>)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The <bpt i="23" x="23">&lt;i23&gt;</bpt>events<ept i="23">&lt;/i23&gt;</ept> member of the <bpt i="24" x="24">&lt;i24&gt;</bpt>epoll_event<ept i="24">&lt;/i24&gt;</ept> structure is a bit mask</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021901Z" creationid="I/O event notification facility" creationdate="20210106T021636Z">
+        <seg><bpt i="24" x="24">&lt;i24&gt;</bpt>epoll_event<ept i="24">&lt;/i24&gt;</ept>结构的<bpt i="23" x="23">&lt;i23&gt;</bpt>events<ept i="23">&lt;/i23&gt;</ept>成员是一个位掩码，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The associated file is available for <bpt i="26" x="26">&lt;a26&gt;</bpt>read(2)<ept i="26">&lt;/a26&gt;</ept> operations.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022355Z" creationid="I/O event notification facility" creationdate="20210106T022334Z">
+        <seg>相关的文件可用于<bpt i="26" x="26">&lt;a26&gt;</bpt>read(2)<ept i="26">&lt;/a26&gt;</ept>操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The associated file is available for <bpt i="28" x="28">&lt;a28&gt;</bpt>write(2)<ept i="28">&lt;/a28&gt;</ept> operations.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022421Z" creationid="I/O event notification facility" creationdate="20210106T022421Z">
+        <seg>相关的文件可用于<bpt i="28" x="28">&lt;a28&gt;</bpt>write(2)<ept i="28">&lt;/a28&gt;</ept>操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The central concept of the <bpt i="3" x="3">&lt;b3&gt;</bpt>epoll <ept i="3">&lt;/b3&gt;</ept>API is the <bpt i="4" x="4">&lt;b4&gt;</bpt>epoll <ept i="4">&lt;/b4&gt;</ept><bpt i="5" x="5">&lt;i5&gt;</bpt>instance<ept i="5">&lt;/i5&gt;</ept>, an</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T140820Z" creationid="kinbei" creationdate="20210102T140820Z">
@@ -790,10 +1422,42 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The default behavior for <bpt i="42" x="42">&lt;b42&gt;</bpt>epoll <ept i="42">&lt;/b42&gt;</ept>is level-</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032129Z" creationid="I/O event notification facility" creationdate="20210106T032129Z">
+        <seg><bpt i="42" x="42">&lt;b42&gt;</bpt>epoll <ept i="42">&lt;/b42&gt;</ept>默认是水平触发。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>The difference</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T024733Z" creationid="I/O event notification facility" creationdate="20210103T024733Z">
         <seg>这两种机制的差异如下所述。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The entry includes the file descriptor,</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T014843Z" creationid="I/O event notification facility" creationdate="20210106T014843Z">
+        <seg>这个条目包括文件描述符<bpt i="7" x="7">&lt;i7&gt;</bpt>fd<ept i="7">&lt;/i7&gt;</ept>,</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The error in all of these cases is <bpt i="99" x="99">&lt;b99&gt;</bpt>EINVAL<ept i="99">&lt;/b99&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T092419Z" creationid="I/O event notification facility" creationdate="20210108T092419Z">
+        <seg>这些情况都会返回<bpt i="99" x="99">&lt;b99&gt;</bpt>EINVAL<ept i="99">&lt;/b99&gt;</ept>错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The event is considered as</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T035551Z" creationid="I/O event notification facility" creationdate="20210106T035551Z">
+        <seg>这个事件在调用<bpt i="59" x="59">&lt;a59&gt;</bpt>epoll_wait(2)<ept i="59">&lt;/a59&gt;</ept>返回后，直至下一次在同一个<bpt i="61" x="61">&lt;a61&gt;</bpt>epoll(7)<ept i="61">&lt;/a61&gt;</ept>文件描述符调用<bpt i="60" x="60">&lt;a60&gt;</bpt>epoll_wait(2)<ept i="60">&lt;/a60&gt;</ept>之前，</seg>
       </tuv>
     </tu>
     <tu>
@@ -818,6 +1482,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T153014Z" creationid="kinbei" creationdate="20210102T152933Z">
         <seg>下面的系统调用用于创建和管理一个<bpt i="9" x="9">&lt;b9&gt;</bpt>epoll<ept i="9">&lt;/b9&gt;</ept>实例：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>The following values may be specified in conjunction with</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081835Z" creationid="I/O event notification facility" creationdate="20210108T081835Z">
+        <seg>下列值可以跟<it pos="begin" x="77">&lt;b77&gt;</it>EPOLLEXCLUSIVE&lt;/b77一起指定：<bpt i="78" x="78">&lt;b78&gt;</bpt>EPOLLIN<ept i="78">&lt;/b78&gt;</ept>, <bpt i="79" x="79">&lt;b79&gt;</bpt>EPOLLOUT<ept i="79">&lt;/b79&gt;</ept>, <bpt i="80" x="80">&lt;b80&gt;</bpt>EPOLLWAKEUP<ept i="80">&lt;/b80&gt;</ept>, 和<bpt i="81" x="81">&lt;b81&gt;</bpt>EPOLLET<ept i="81">&lt;/b81&gt;</ept>。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -894,6 +1566,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>The user must call</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032952Z" creationid="I/O event notification facility" creationdate="20210106T032952Z">
+        <seg>用户必须调用<bpt i="50" x="50">&lt;b50&gt;</bpt>epoll_ctl<ept i="50">&lt;/b50&gt;</ept>()和<bpt i="51" x="51">&lt;b51&gt;</bpt>EPOLL_CTL_MOD <ept i="51">&lt;/b51&gt;</ept>来给文件描述符设置新的事件掩码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>There is an exceptional condition on the file descriptor.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T023717Z" creationid="I/O event notification facility" creationdate="20210106T023655Z">
+        <seg>在文件描述符上有特殊情况。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>They will be combined.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T071153Z" creationid="I/O event notification facility" creationdate="20210105T071153Z">
@@ -934,10 +1622,66 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>This error can</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102200Z" creationid="I/O event notification facility" creationdate="20210108T102200Z">
+        <seg>当<bpt i="47" x="47">&lt;i47&gt;</bpt>fd<ept i="47">&lt;/i47&gt;</ept>指向如常规的文件或目录时，会出现此错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This event is also reported for the write end</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T024431Z" creationid="I/O event notification facility" creationdate="20210106T024431Z">
+        <seg>当管道的读取端关闭时，这个事件也会通知管道的写入端。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This flag is an input flag for the <bpt i="44" x="44">&lt;i44&gt;</bpt>event.events<ept i="44">&lt;/i44&gt;</ept> field when</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032327Z" creationid="I/O event notification facility" creationdate="20210106T032327Z">
+        <seg>当调用<bpt i="45" x="45">&lt;b45&gt;</bpt>epoll_ctl<ept i="45">&lt;/b45&gt;</ept>()时，这个标志是<bpt i="44" x="44">&lt;i44&gt;</bpt>event.events<ept i="44">&lt;/i44&gt;</ept>字段的输入标志；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This flag is an input flag for the <bpt i="52" x="52">&lt;i52&gt;</bpt>event.events<ept i="52">&lt;/i52&gt;</ept> field when</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033100Z" creationid="I/O event notification facility" creationdate="20210106T033058Z">
+        <seg>当调用<bpt i="53" x="53">&lt;b53&gt;</bpt>epoll_ctl<ept i="53">&lt;/b53&gt;</ept>()时，这个标志位是<bpt i="52" x="52">&lt;i52&gt;</bpt>event.events<ept i="52">&lt;/i52&gt;</ept>字段的输入标志。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This flag is an input flag for the <bpt i="65" x="65">&lt;i65&gt;</bpt>event.events<ept i="65">&lt;/i65&gt;</ept> field when</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072903Z" creationid="I/O event notification facility" creationdate="20210108T072903Z">
+        <seg>当调用<bpt i="66" x="66">&lt;b66&gt;</bpt>epoll_ctl<ept i="66">&lt;/b66&gt;</ept>()时， 这个标志位是<bpt i="65" x="65">&lt;i65&gt;</bpt>event.events<ept i="65">&lt;/i65&gt;</ept>字段的输入标志；</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This means that after an event notified for</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032556Z" creationid="I/O event notification facility" creationdate="20210106T032556Z">
+        <seg>也就是说，当通过<bpt i="48" x="48">&lt;a48&gt;</bpt>epoll_wait(2)<ept i="48">&lt;/a48&gt;</ept>返回文件描述符的一个事件通知后，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>This specifies a limit on the total number of file</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T062843Z" creationid="I/O event notification facility" creationdate="20210104T062837Z">
         <seg>这个接口指定通过系统的所有 epoll 实例注册的文件描述符的总数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>This system call is used to add, modify, or remove entries in the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013316Z" creationid="I/O event notification facility" creationdate="20210106T012911Z">
+        <seg>此函数用于增加，修改或删除文件描述符<bpt i="1" x="1">&lt;i1&gt;</bpt>epfd<ept i="1">&lt;/i1&gt;</ept>所指向的<bpt i="0" x="0">&lt;a0&gt;</bpt>epoll(7)<ept i="0">&lt;/a0&gt;</ept>实例的兴趣列表(interest list)条目。</seg>
       </tuv>
     </tu>
     <tu>
@@ -954,6 +1698,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T063359Z" creationid="I/O event notification facility" creationdate="20210105T063352Z">
         <seg>为了防止这种情况发生，文件描述符必须在它复制之前从 interest list 明确删除(使用<bpt i="121" x="121">&lt;a121&gt;</bpt>epoll_ctl(2)<ept i="121">&lt;/a121&gt;</ept> <bpt i="122" x="122">&lt;b122&gt;</bpt>EPOLL_CTL_DEL<ept i="122">&lt;/b122&gt;</ept>)。(</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>Valid values for the <bpt i="4" x="4">&lt;i4&gt;</bpt>op<ept i="4">&lt;/i4&gt;</ept> argument are:</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013724Z" creationid="I/O event notification facility" creationdate="20210106T013715Z">
+        <seg><bpt i="4" x="4">&lt;i4&gt;</bpt>op<ept i="4">&lt;/i4&gt;</ept>参数的有效值为：</seg>
       </tuv>
     </tu>
     <tu>
@@ -982,10 +1734,34 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>When a wakeup event occurs and multiple</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080038Z" creationid="I/O event notification facility" creationdate="20210108T080038Z">
+        <seg>当一个唤醒事件发生并且多个 epoll 文件描述符使用 <bpt i="70" x="70">&lt;b70&gt;</bpt>EPOLLEXCLUSIVE<ept i="70">&lt;/b70&gt;</ept>附加到同一目标文件，</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When an error occurs,</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095513Z" creationid="I/O event notification facility" creationdate="20210108T095513Z">
+        <seg>发生错误时，<bpt i="1" x="1">&lt;b1&gt;</bpt>epoll_ctl<ept i="1">&lt;/b1&gt;</ept>()返回 -1 并且设置对应的<bpt i="2" x="2">&lt;i2&gt;</bpt><bpt i="3" x="3">&lt;a3&gt;</bpt>errno<ept i="3">&lt;/a3&gt;</ept><ept i="2">&lt;/i2&gt;</ept>。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>When and how you</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T072837Z" creationid="I/O event notification facility" creationdate="20210105T072837Z">
         <seg>何时，如何使用那个文件描述符完全取决于你。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>When successful, <bpt i="0" x="0">&lt;b0&gt;</bpt>epoll_ctl<ept i="0">&lt;/b0&gt;</ept>() returns zero.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095434Z" creationid="I/O event notification facility" creationdate="20210108T095434Z">
+        <seg>成功时，<bpt i="0" x="0">&lt;b0&gt;</bpt>epoll_ctl<ept i="0">&lt;/b0&gt;</ept>()返回 0。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1126,6 +1902,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>about edge-triggered and level-triggered notification.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032238Z" creationid="I/O event notification facility" creationdate="20210106T032238Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>after a file descriptor that is part of an interest list has</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T062821Z" creationid="I/O event notification facility" creationdate="20210105T062821Z">
@@ -1182,6 +1966,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>an error.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084432Z" creationid="I/O event notification facility" creationdate="20210108T084432Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>an event happens which wakes the device from sleep, the device</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T035149Z" creationid="I/O event notification facility" creationdate="20210104T035149Z">
@@ -1214,6 +2006,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>available event types:</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022202Z" creationid="I/O event notification facility" creationdate="20210106T022202Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>b) by waiting for an event only after <bpt i="41" x="41">&lt;a41&gt;</bpt>read(2)<ept i="41">&lt;/a41&gt;</ept> or <bpt i="42" x="42">&lt;a42&gt;</bpt>write(2)<ept i="42">&lt;/a42&gt;</ept> return</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T151721Z" creationid="I/O event notification facility" creationdate="20210103T151721Z">
@@ -1222,10 +2022,26 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>be reported by the <bpt i="49" x="49">&lt;b49&gt;</bpt>epoll <ept i="49">&lt;/b49&gt;</ept>interface.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032703Z" creationid="I/O event notification facility" creationdate="20210106T032703Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>been closed, events may be reported for that file descriptor</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T063123Z" creationid="I/O event notification facility" creationdate="20210105T063023Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>being "processed" from the time when it is returned by a</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T035710Z" creationid="I/O event notification facility" creationdate="20210106T035615Z">
+        <seg>它被视为“已处理”，</seg>
       </tuv>
     </tu>
     <tu>
@@ -1246,9 +2062,57 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>call to <bpt i="59" x="59">&lt;a59&gt;</bpt>epoll_wait(2)<ept i="59">&lt;/a59&gt;</ept> until the next call to <bpt i="60" x="60">&lt;a60&gt;</bpt>epoll_wait(2)<ept i="60">&lt;/a60&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T035618Z" creationid="I/O event notification facility" creationdate="20210106T035618Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>calling <bpt i="45" x="45">&lt;b45&gt;</bpt>epoll_ctl<ept i="45">&lt;/b45&gt;</ept>(); it is never returned by</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032347Z" creationid="I/O event notification facility" creationdate="20210106T032347Z">
+        <seg>它永远不会通过<bpt i="46" x="46">&lt;a46&gt;</bpt>epoll_wait(2)<ept i="46">&lt;/a46&gt;</ept>返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>calling <bpt i="53" x="53">&lt;b53&gt;</bpt>epoll_ctl<ept i="53">&lt;/b53&gt;</ept>(); it is never returned by</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033142Z" creationid="I/O event notification facility" creationdate="20210106T033142Z">
+        <seg>它永远不会通过<bpt i="54" x="54">&lt;a54&gt;</bpt>epoll_wait(2)<ept i="54">&lt;/a54&gt;</ept>返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>calling <bpt i="66" x="66">&lt;b66&gt;</bpt>epoll_ctl<ept i="66">&lt;/b66&gt;</ept>(); it is never returned by</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072919Z" creationid="I/O event notification facility" creationdate="20210108T072919Z">
+        <seg>它永远不会通过<bpt i="67" x="67">&lt;a67&gt;</bpt>epoll_wait(2)<ept i="67">&lt;/a67&gt;</ept>返回。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>can be considered as a container for two lists:</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T141014Z" creationid="kinbei" creationdate="20210102T140933Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>channel will return 0 (end of file) only after all</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T031953Z" creationid="I/O event notification facility" creationdate="20210106T031953Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>closed its end of the channel.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025550Z" creationid="I/O event notification facility" creationdate="20210106T025550Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1258,6 +2122,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T071325Z" creationid="I/O event notification facility" creationdate="20210105T071325Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>composed by ORing together zero or more of the following</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021953Z" creationid="I/O event notification facility" creationdate="20210106T021840Z">
+        <seg>由 以下 0 或多个可用的事件类型进行或操作而构成：</seg>
       </tuv>
     </tu>
     <tu>
@@ -1274,6 +2146,22 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T075246Z" creationid="I/O event notification facility" creationdate="20210104T075246Z">
         <seg>conn_sock = accept(listen_sock,</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>control operation.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101733Z" creationid="I/O event notification facility" creationdate="20210108T101733Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>default in this scenario (when <bpt i="72" x="72">&lt;b72&gt;</bpt>EPOLLEXCLUSIVE <ept i="72">&lt;/b72&gt;</ept>is not set)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080854Z" creationid="I/O event notification facility" creationdate="20210108T080854Z">
+        <seg>默认在这种情况下(当<bpt i="72" x="72">&lt;b72&gt;</bpt>EPOLLEXCLUSIVE <ept i="72">&lt;/b72&gt;</ept>未设置)，所有 epoll 文件描述符都会收到一个事件。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1310,6 +2198,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>descriptor <bpt i="18" x="18">&lt;i18&gt;</bpt>fd<ept i="18">&lt;/i18&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020856Z" creationid="I/O event notification facility" creationdate="20210106T020856Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>descriptor <bpt i="1" x="1">&lt;i1&gt;</bpt>epfd<ept i="1">&lt;/i1&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013401Z" creationid="I/O event notification facility" creationdate="20210106T013401Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>descriptor as ready in its associated data structure, thereby</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T083426Z" creationid="I/O event notification facility" creationdate="20210105T083426Z">
@@ -1326,6 +2230,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>descriptor that is being attached to the target file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T075859Z" creationid="I/O event notification facility" creationdate="20210108T075859Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>descriptor to the same <bpt i="102" x="102">&lt;b102&gt;</bpt>epoll <ept i="102">&lt;/b102&gt;</ept>instance.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T033242Z" creationid="I/O event notification facility" creationdate="20210105T033242Z">
@@ -1337,6 +2249,30 @@
         <seg>descriptor using <bpt i="52" x="52">&lt;a52&gt;</bpt>epoll_ctl(2)<ept i="52">&lt;/a52&gt;</ept> with <bpt i="53" x="53">&lt;b53&gt;</bpt>EPOLL_CTL_MOD<ept i="53">&lt;/b53&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T013257Z" creationid="I/O event notification facility" creationdate="20210104T013257Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>descriptor with a new event mask.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033003Z" creationid="I/O event notification facility" creationdate="20210106T033003Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>descriptor, <bpt i="69" x="69">&lt;i69&gt;</bpt>fd<ept i="69">&lt;/i69&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T075902Z" creationid="I/O event notification facility" creationdate="20210108T075902Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>descriptor, <bpt i="6" x="6">&lt;i6&gt;</bpt>epfd<ept i="6">&lt;/i6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T014746Z" creationid="I/O event notification facility" creationdate="20210106T014746Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1374,6 +2310,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>descriptors will receive an event with <bpt i="71" x="71">&lt;a71&gt;</bpt>epoll_wait(2)<ept i="71">&lt;/a71&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080138Z" creationid="I/O event notification facility" creationdate="20210108T080138Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>directory.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102212Z" creationid="I/O event notification facility" creationdate="20210108T102212Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>disable the associated file descriptor after the receipt of an</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T012818Z" creationid="I/O event notification facility" creationdate="20210104T012818Z">
@@ -1386,6 +2338,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T075328Z" creationid="I/O event notification facility" creationdate="20210104T075328Z">
         <seg>do_use_fd(events[n].data.fd);</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>does not enter "suspend" or "hibernate" while this event</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033819Z" creationid="I/O event notification facility" creationdate="20210106T033819Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -1422,10 +2382,58 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>edge-triggered monitoring.)</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022929Z" creationid="I/O event notification facility" creationdate="20210106T022929Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>epoll - I/O event notification facility</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T101535Z" creationid="kinbei" creationdate="20210102T101535Z">
         <seg>epoll - I/O 事件通知机制</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>epoll file descriptors are attached to the same target</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080041Z" creationid="I/O event notification facility" creationdate="20210108T080041Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>epoll instance.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101143Z" creationid="I/O event notification facility" creationdate="20210108T101143Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>epoll instances greater than 5.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101546Z" creationid="I/O event notification facility" creationdate="20210108T101546Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>epoll_ctl - control interface for an epoll file descriptor</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T012530Z" creationid="I/O event notification facility" creationdate="20210106T012530Z">
+        <seg>epoll_ctl - epoll 文件描述符的控制接口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>epoll_data_t data;        /* User data variable */</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021132Z" creationid="I/O event notification facility" creationdate="20210106T021132Z">
+        <seg>epoll_data_t data;        /* User data variable */</seg>
       </tuv>
     </tu>
     <tu>
@@ -1473,6 +2481,14 @@
         <seg>event #13, then your event cache might still say there are events</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T091735Z" creationid="I/O event notification facility" creationdate="20210105T091735Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>event file descriptor with <bpt i="64" x="64">&lt;b64&gt;</bpt>EPOLL_CTL_MOD<ept i="64">&lt;/b64&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072343Z" creationid="I/O event notification facility" creationdate="20210108T072343Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1558,6 +2574,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>file descriptor, the removal of the event file descriptor</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072253Z" creationid="I/O event notification facility" creationdate="20210108T072253Z">
+        <seg>该文件描述符的关闭，使用<bpt i="62" x="62">&lt;b62&gt;</bpt>EPOLL_CTL_DEL<ept i="62">&lt;/b62&gt;</ept>删除文件描述符的事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>file descriptor.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032113Z" creationid="I/O event notification facility" creationdate="20210106T032113Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>file descriptors that are already ready.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T083909Z" creationid="I/O event notification facility" creationdate="20210105T083909Z">
@@ -1570,6 +2602,14 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T070947Z" creationid="I/O event notification facility" creationdate="20210105T070941Z">
         <seg>如果这些文件描述符在库函数里使用<bpt i="123" x="123">&lt;a123&gt;</bpt>dup(2)<ept i="123">&lt;/a123&gt;</ept> 或 <bpt i="124" x="124">&lt;a124&gt;</bpt>fork(2)<ept i="124">&lt;/a124&gt;</ept>进行复制，那么就很难确保)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>file using <bpt i="70" x="70">&lt;b70&gt;</bpt>EPOLLEXCLUSIVE<ept i="70">&lt;/b70&gt;</ept>, one or more of the epoll file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080134Z" creationid="I/O event notification facility" creationdate="20210108T080134Z">
+        <seg>一个或多个 epoll 文件描述符将收到一个由<bpt i="71" x="71">&lt;a71&gt;</bpt>epoll_wait(2)<ept i="71">&lt;/a71&gt;</ept>返回的事件。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1614,6 +2654,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>for further details.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102046Z" creationid="I/O event notification facility" creationdate="20210108T102046Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>for the target file descriptor, <bpt i="3" x="3">&lt;i3&gt;</bpt>fd<ept i="3">&lt;/i3&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013658Z" creationid="I/O event notification facility" creationdate="20210106T013658Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>function <bpt i="79" x="79">&lt;i79&gt;</bpt>do_use_fd()<ept i="79">&lt;/i79&gt;</ept> uses the new ready file descriptor until</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T073750Z" creationid="I/O event notification facility" creationdate="20210104T073621Z">
@@ -1633,6 +2689,14 @@
         <seg>generated upon receipt of multiple chunks of data, the caller has</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T012615Z" creationid="I/O event notification facility" creationdate="20210104T012615Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>half of connection.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022555Z" creationid="I/O event notification facility" creationdate="20210106T022555Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1758,10 +2822,42 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>instances monitoring one another or a nesting depth of</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101543Z" creationid="I/O event notification facility" creationdate="20210108T101543Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>instances on the system.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T062854Z" creationid="I/O event notification facility" creationdate="20210104T062854Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>instances that did not specify <bpt i="75" x="75">&lt;b75&gt;</bpt>EPOLLEXCLUSIVE<ept i="75">&lt;/b75&gt;</ept>, and at</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081559Z" creationid="I/O event notification facility" creationdate="20210108T081559Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>instances, some with the <bpt i="74" x="74">&lt;b74&gt;</bpt>EPOLLEXCLUSIVE <ept i="74">&lt;/b74&gt;</ept>flag, and others</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081246Z" creationid="I/O event notification facility" creationdate="20210108T081246Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>int          fd;</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021113Z" creationid="I/O event notification facility" creationdate="20210106T021113Z">
+        <seg>int          fd;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1777,6 +2873,22 @@
         <seg>interest in monitoring.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T143003Z" creationid="kinbei" creationdate="20210102T143003Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>interest list of the <bpt i="0" x="0">&lt;a0&gt;</bpt>epoll(7)<ept i="0">&lt;/a0&gt;</ept> instance referred to by the file</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T013357Z" creationid="I/O event notification facility" creationdate="20210106T013357Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>interest list.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020603Z" creationid="I/O event notification facility" creationdate="20210106T020603Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1814,6 +2926,38 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>is already registered with this epoll instance.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100319Z" creationid="I/O event notification facility" creationdate="20210108T100319Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>is disabled in the interest list and no other events will</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032658Z" creationid="I/O event notification facility" creationdate="20210106T032658Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>is for all epoll file descriptors to receive an event.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T080858Z" creationid="I/O event notification facility" creationdate="20210108T080858Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>is pending or being processed.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033822Z" creationid="I/O event notification facility" creationdate="20210106T033822Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>it already sent.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T135303Z" creationid="I/O event notification facility" creationdate="20210103T135303Z">
@@ -1838,10 +2982,26 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>least one of the epoll instances that did specify</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081603Z" creationid="I/O event notification facility" creationdate="20210108T081603Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>level-triggered interface and scales well to large numbers of</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T140237Z" creationid="kinbei" creationdate="20210102T135240Z">
         <seg>水平触发(LT - level-triggered) 接口 并且在监听大量文件描述符的情况下也能正常工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>likewise fail.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T092355Z" creationid="I/O event notification facility" creationdate="20210108T092355Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -1857,6 +3017,14 @@
         <seg>list (using <bpt i="121" x="121">&lt;a121&gt;</bpt>epoll_ctl(2)<ept i="121">&lt;/a121&gt;</ept> <bpt i="122" x="122">&lt;b122&gt;</bpt>EPOLL_CTL_DEL<ept i="122">&lt;/b122&gt;</ept>) before it is</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T063423Z" creationid="I/O event notification facility" creationdate="20210105T063423Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>list to the new settings specified in <bpt i="13" x="13">&lt;i13&gt;</bpt>event<ept i="13">&lt;/i13&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T020347Z" creationid="I/O event notification facility" creationdate="20210106T020347Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1886,6 +3054,30 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>necessary to set it in <bpt i="35" x="35">&lt;i35&gt;</bpt>events<ept i="35">&lt;/i35&gt;</ept> when calling <bpt i="36" x="36">&lt;b36&gt;</bpt>epoll_ctl<ept i="36">&lt;/b36&gt;</ept>().</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T024729Z" creationid="I/O event notification facility" creationdate="20210106T024715Z">
+        <seg>所以没必要在调用<bpt i="36" x="36">&lt;b36&gt;</bpt>epoll_ctl<ept i="36">&lt;/b36&gt;</ept>()时设置这个事件到<bpt i="35" x="35">&lt;i35&gt;</bpt>events<ept i="35">&lt;/i35&gt;</ept>里。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>necessary to set it in <bpt i="39" x="39">&lt;i39&gt;</bpt>events<ept i="39">&lt;/i39&gt;</ept> when calling <bpt i="40" x="40">&lt;b40&gt;</bpt>epoll_ctl<ept i="40">&lt;/b40&gt;</ept>().</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025154Z" creationid="I/O event notification facility" creationdate="20210106T025154Z">
+        <seg>所以没必要在调用<bpt i="40" x="40">&lt;b40&gt;</bpt>epoll_ctl<ept i="40">&lt;/b40&gt;</ept>()时设置这个事件到<bpt i="39" x="39">&lt;i39&gt;</bpt>events<ept i="39">&lt;/i39&gt;</ept>里。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>new file descriptor on an epoll instance.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102027Z" creationid="I/O event notification facility" creationdate="20210108T102027Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>nfds = epoll_wait(epollfd, events, MAX_EVENTS, -1);</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T075224Z" creationid="I/O event notification facility" creationdate="20210104T075224Z">
@@ -1910,6 +3102,22 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>occur if <bpt i="47" x="47">&lt;i47&gt;</bpt>fd<ept i="47">&lt;/i47&gt;</ept> refers to, for example, a regular file or a</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102209Z" creationid="I/O event notification facility" creationdate="20210108T102209Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>of a pipe when the read end has been closed.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T024457Z" creationid="I/O event notification facility" creationdate="20210106T024457Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>of the read/write I/O space is to continue to read/write</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T075535Z" creationid="I/O event notification facility" creationdate="20210105T075535Z">
@@ -1918,9 +3126,41 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>on the same <bpt i="61" x="61">&lt;a61&gt;</bpt>epoll(7)<ept i="61">&lt;/a61&gt;</ept> file descriptor, the closure of that</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072102Z" creationid="I/O event notification facility" creationdate="20210108T071853Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>operation would result in a circular loop of epoll</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101538Z" creationid="I/O event notification facility" creationdate="20210108T101538Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>operation.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T072512Z" creationid="I/O event notification facility" creationdate="20210105T072512Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>operation; attempts to employ it with <bpt i="89" x="89">&lt;b89&gt;</bpt>EPOLL_CTL_MOD <ept i="89">&lt;/b89&gt;</ept>yield</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T084427Z" creationid="I/O event notification facility" creationdate="20210108T084427Z">
+        <seg>试图和<bpt i="89" x="89">&lt;b89&gt;</bpt>EPOLL_CTL_MOD <ept i="89">&lt;/b89&gt;</ept>会收到错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>outstanding data in the channel has been consumed.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032000Z" creationid="I/O event notification facility" creationdate="20210106T032000Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -1969,6 +3209,22 @@
         <seg>pipe.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T025338Z" creationid="I/O event notification facility" creationdate="20210103T025338Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>previously been applied to this <bpt i="25" x="25">&lt;i25&gt;</bpt>epfd<ept i="25">&lt;/i25&gt;</ept>, <bpt i="26" x="26">&lt;i26&gt;</bpt>fd<ept i="26">&lt;/i26&gt;</ept> pair.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101051Z" creationid="I/O event notification facility" creationdate="20210108T101051Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>problems in certain scenarios.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081151Z" creationid="I/O event notification facility" creationdate="20210108T081151Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2070,6 +3326,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>registered with this epoll instance.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T101627Z" creationid="I/O event notification facility" creationdate="20210108T101627Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>registration cost in bytes.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T065235Z" creationid="I/O event notification facility" creationdate="20210104T065235Z">
@@ -2078,9 +3342,25 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>reported if they occur, regardless of whether they are</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T082111Z" creationid="I/O event notification facility" creationdate="20210108T082111Z">
+        <seg>无论它们是否有在<bpt i="84" x="84">&lt;i84&gt;</bpt>events<ept i="84">&lt;/i84&gt;</ept>里设置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>reread available I/O.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T071528Z" creationid="I/O event notification facility" creationdate="20210105T071528Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>returned by <bpt i="103" x="103">&lt;a103&gt;</bpt>epoll_wait(2)<ept i="103">&lt;/a103&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T095211Z" creationid="I/O event notification facility" creationdate="20210108T095211Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2150,10 +3430,26 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>specified in <bpt i="84" x="84">&lt;i84&gt;</bpt>events<ept i="84">&lt;/i84&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T082116Z" creationid="I/O event notification facility" creationdate="20210108T082116Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>specified, it is the caller's responsibility to rearm the file</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T013249Z" creationid="I/O event notification facility" creationdate="20210104T013249Z">
         <seg>使用<bpt i="52" x="52">&lt;a52&gt;</bpt>epoll_ctl(2)<ept i="52">&lt;/a52&gt;</ept>和<bpt i="53" x="53">&lt;b53&gt;</bpt>EPOLL_CTL_MOD<ept i="53">&lt;/b53&gt;</ept>重新装备文件描述符是调用者的责任。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>specifies <bpt i="96" x="96">&lt;b96&gt;</bpt>EPOLLEXCLUSIVE <ept i="96">&lt;/b96&gt;</ept>in <bpt i="97" x="97">&lt;i97&gt;</bpt>events<ept i="97">&lt;/i97&gt;</ept> and specifies the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T092348Z" creationid="I/O event notification facility" creationdate="20210108T092348Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -2174,6 +3470,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>stream socket, this event merely indicates that the peer</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T025547Z" creationid="I/O event notification facility" creationdate="20210106T025547Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>struct epoll_event ev, events[MAX_EVENTS];</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T074337Z" creationid="I/O event notification facility" creationdate="20210104T074337Z">
@@ -2182,9 +3486,25 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>struct epoll_event {</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021126Z" creationid="I/O event notification facility" creationdate="20210106T021126Z">
+        <seg>struct epoll_event {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>switching between <bpt i="91" x="91">&lt;b91&gt;</bpt>EPOLLIN <ept i="91">&lt;/b91&gt;</ept>and <bpt i="92" x="92">&lt;b92&gt;</bpt>EPOLLOUT <ept i="92">&lt;/b92&gt;</ept>calling <bpt i="93" x="93">&lt;a93&gt;</bpt>epoll_ctl(2)<ept i="93">&lt;/a93&gt;</ept> with</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T130645Z" creationid="I/O event notification facility" creationdate="20210104T130645Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>target file descriptor <bpt i="98" x="98">&lt;i98&gt;</bpt>fd<ept i="98">&lt;/i98&gt;</ept> as an epoll instance will</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T092352Z" creationid="I/O event notification facility" creationdate="20210108T092352Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2222,6 +3542,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>the <bpt i="58" x="58">&lt;b58&gt;</bpt>CAP_BLOCK_SUSPEND <ept i="58">&lt;/b58&gt;</ept>capability, ensure that the system</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T033800Z" creationid="I/O event notification facility" creationdate="20210106T033757Z">
+        <seg>请确保当事件挂起或正在处理时，系统不会“挂起”或“休眠”。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>the above example, an event on <bpt i="32" x="32">&lt;i32&gt;</bpt>rfd<ept i="32">&lt;/i32&gt;</ept> will be generated because of</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T145539Z" creationid="I/O event notification facility" creationdate="20210103T145539Z">
@@ -2250,6 +3578,22 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T080306Z" creationid="I/O event notification facility" creationdate="20210105T080103Z">
         <seg>读取 I/O 空间耗尽的条件也可以检查读取/写入目标文件描述符的数据总量</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>the file descriptor by <bpt i="48" x="48">&lt;a48&gt;</bpt>epoll_wait(2)<ept i="48">&lt;/a48&gt;</ept>, the file descriptor</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032758Z" creationid="I/O event notification facility" creationdate="20210106T032653Z">
+        <seg>这个文件描述符会在兴趣列表中被禁用并且<bpt i="49" x="49">&lt;b49&gt;</bpt>epoll <ept i="49">&lt;/b49&gt;</ept>接口不会报告其它事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>the kernel should save and then return (via <bpt i="22" x="22">&lt;a22&gt;</bpt>epoll_wait(2)<ept i="22">&lt;/a22&gt;</ept>) when</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021409Z" creationid="I/O event notification facility" creationdate="20210106T021409Z">
+        <seg></seg>
       </tuv>
     </tu>
     <tu>
@@ -2289,6 +3633,30 @@
         <seg>them.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="kinbei" changedate="20210102T140157Z" creationid="kinbei" creationdate="20210102T140134Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>this file descriptor becomes ready.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021413Z" creationid="I/O event notification facility" creationdate="20210106T021413Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>this interface.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T100445Z" creationid="I/O event notification facility" creationdate="20210108T100445Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>this is not required: as usual, these events are always</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T082020Z" creationid="I/O event notification facility" creationdate="20210108T082020Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2342,10 +3710,50 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>triggered.</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T032133Z" creationid="I/O event notification facility" creationdate="20210106T032133Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>trying to drain it the other files will not get processed causing</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T083058Z" creationid="I/O event notification facility" creationdate="20210105T083058Z">
         <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>typedef union epoll_data {</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021106Z" creationid="I/O event notification facility" creationdate="20210106T021106Z">
+        <seg>typedef union epoll_data {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>uint32_t     events;      /* Epoll events */</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021129Z" creationid="I/O event notification facility" creationdate="20210106T021129Z">
+        <seg>uint32_t     events;      /* Epoll events */</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>uint32_t     u32;</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021116Z" creationid="I/O event notification facility" creationdate="20210106T021116Z">
+        <seg>uint32_t     u32;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>uint64_t     u64;</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021119Z" creationid="I/O event notification facility" creationdate="20210106T021119Z">
+        <seg>uint64_t     u64;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2366,6 +3774,14 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>void        *ptr;</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021111Z" creationid="I/O event notification facility" creationdate="20210106T021111Z">
+        <seg>void        *ptr;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>waiting for that file descriptor causing confusion.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210105T091739Z" creationid="I/O event notification facility" creationdate="20210105T091739Z">
@@ -2377,6 +3793,14 @@
         <seg>wake-ups in some scenarios.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T034720Z" creationid="I/O event notification facility" creationdate="20210104T034720Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>was encountered while trying to register (<bpt i="42" x="42">&lt;b42&gt;</bpt>EPOLL_CTL_ADD<ept i="42">&lt;/b42&gt;</ept>) a</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T102023Z" creationid="I/O event notification facility" creationdate="20210108T102023Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2406,9 +3830,33 @@
     </tu>
     <tu>
       <tuv xml:lang="en-US">
+        <seg>with <bpt i="62" x="62">&lt;b62&gt;</bpt>EPOLL_CTL_DEL<ept i="62">&lt;/b62&gt;</ept>, or the clearing of <bpt i="63" x="63">&lt;b63&gt;</bpt>EPOLLWAKEUP <ept i="63">&lt;/b63&gt;</ept>for the</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T072333Z" creationid="I/O event notification facility" creationdate="20210108T072333Z">
+        <seg>或使用<bpt i="64" x="64">&lt;b64&gt;</bpt>EPOLL_CTL_MOD<ept i="64">&lt;/b64&gt;</ept>清除文件描述符的<bpt i="63" x="63">&lt;b63&gt;</bpt>EPOLLWAKEUP <ept i="63">&lt;/b63&gt;</ept>事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>without, then events will be provided to all epoll</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210108T081549Z" creationid="I/O event notification facility" creationdate="20210108T081429Z">
+        <seg>那么事件将发送到那些没有设置<bpt i="75" x="75">&lt;b75&gt;</bpt>EPOLLEXCLUSIVE<ept i="75">&lt;/b75&gt;</ept>的 epoll 实例和至少有一个指定了<bpt i="76" x="76">&lt;b76&gt;</bpt>EPOLLEXCLUSIVE<ept i="76">&lt;/b76&gt;</ept>标志的 epoll 实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
         <seg>write starve a task that is handling multiple file descriptors.</seg>
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210103T151259Z" creationid="I/O event notification facility" creationdate="20210103T151259Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>writing simple code to detect peer shutdown when using</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T022925Z" creationid="I/O event notification facility" creationdate="20210106T022925Z">
         <seg></seg>
       </tuv>
     </tu>
@@ -2442,6 +3890,22 @@
       </tuv>
       <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210104T075324Z" creationid="I/O event notification facility" creationdate="20210104T075324Z">
         <seg>} else {</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>} epoll_data_t;</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021122Z" creationid="I/O event notification facility" creationdate="20210106T021122Z">
+        <seg>} epoll_data_t;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en-US">
+        <seg>};</seg>
+      </tuv>
+      <tuv xml:lang="zh-CN" changeid="I/O event notification facility" changedate="20210106T021136Z" creationid="I/O event notification facility" creationdate="20210106T021136Z">
+        <seg>};</seg>
       </tuv>
     </tu>
     <tu>
